@@ -3,7 +3,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Zeeny <?= date('Y');?></span>
+                        <span>Copyright &copy; R.A.F <?= date('Y');?></span>
                     </div>
                 </div>
             </footer>
@@ -48,7 +48,29 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('assets/') ?>js/sb-admin-2.min.js"></script>
+    <script>
+                $('.custom-file-input').on('change', function() {
+                    let fileName = $(this).val().split('\\').pop();
+                    $(this).next('.custom-file-label').addClass("selected").html(fileName);
+                });
 
-</body>
+                $('.form-check-input').on('click', function() {
+                    const menuId = $(this).data('menu');
+                    const roleId = $(this).data('role');
 
+                    $.ajax({
+                        url: "<?= base_url('admin/changeaccess'); ?>",
+                        type: 'post',
+                        data: {
+                            menuId: menuId,
+                            roleId: roleId
+                        },
+                        success: function() {
+                            document.location.href = "<?= base_url('admin/roleaccess/'); ?>" + roleId;
+                        }
+                    });
+
+                });
+            </script>
+    </body>
 </html>
