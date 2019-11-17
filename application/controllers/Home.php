@@ -1,13 +1,35 @@
 <?php
 
 	class Home extends CI_Controller{
-	public function index($nama = 'Rafly Yunandi A')
+		
+
+	public function index()
 	{
+		
 		$data['title'] = 'R.A.F Shop Index';
 		$data['judul'] = 'Halaman Home';
-		$data['nama'] = $nama;
-		$this->load->view('templates/header', $data);
+
+		$this->load->model('Mahasiswa_model');
+		$data['mhs'] = $this->Mahasiswa_model->getAllMahasiswa();
+		$data['user'] = '.jpg';
+		$this->load->view('templates/home_header', $data);
 		$this->load->view('home/index', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/home_footer');
 	}
+
+	public function pembayaran()
+	{
+		$this->load->view('templates/home_header');
+		$this->load->view('home/pembayaran');
+		$this->load->view('templates/home_footer');
+	}
+
+	public function keranjang()
+	{
+		$this->load->view('templates/home_header');
+		$this->load->view('home/pembayaran');
+		$this->load->view('templates/home_footer');
+	}
+
+	
 }
