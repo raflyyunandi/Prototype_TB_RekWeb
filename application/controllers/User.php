@@ -40,7 +40,7 @@ class User extends CI_Controller{
             // cek jika ada gambar yang akan diupload
             $upload_image = $_FILES['image']['name'];
 
-            if ($upload_image) {
+          if ($upload_image) {
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size']      = '2048';
                 $config['upload_path'] = './assets/img/profile/';
@@ -56,9 +56,8 @@ class User extends CI_Controller{
                     $this->db->set('image', $new_image);
                 } else {
                     echo $this->upload->dispay_errors();
-                }
+                } 
             }
-
             $this->db->set('name', $name);
             $this->db->where('email', $email);
             $this->db->update('user');
