@@ -26,10 +26,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      
-    </form>
+   
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url('home/keranjang');  ?>">Keranjang </a>

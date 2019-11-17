@@ -18,7 +18,7 @@
 		<div class="col-md-12">
 			<form action="" method="post">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Cari Mahasiswa ... " name="keyword">
+					<input type="text" class="form-control" placeholder="Cari Barang ... " name="keyword">
 					<div class="input-group-append">
 					<button class="btn btn-outline-primary" type="submit" id="cari">Cari</button>
 					</div>
@@ -32,31 +32,35 @@
 		<div class="col-md-12">
 		<h3>Daftar Barang</h3>
 			<?php if (empty($mhs)) : ?>
-			<div class="alert alert-danger" role="alert"> Data Mahasiswa tidak ditemukan ! </div>
+			<div class="alert alert-danger" role="alert"> Data Barang tidak ditemukan ! </div>
 			<?php endif; ?>
 			
 			<?php foreach($mhs as $mhs) : ?>
 				<ul class="list-group">
-				<div class="card mb-12" style="max-width: 540px;">
-					<div class="row no-gutters">
+				<div class="card" >
+					<div class="row">
             			<div class="col-md-4">
-				 <img src="<?= base_url('assets/img/profile/default').$user ?>" class="card-img"  alt="...">
+				 <img style="width: 200px;"src="<?= base_url('assets/img/profile/default').$user ?>" class="card-img"  alt="...">
 				</div>
-					<div class="col-md-8">
+					<div class="col-md-6">
 	                <div class="card-body">
-	                    <h3 class="card-title">Nama Barang</h3>
+	                    <h3 class="card-title"><?=$mhs['nama']?></h3>
 	                    <p class="card-text ">Rp 50.000,-</p>
 						</div>
+
+				<li type="none">
+					
+					<a  href="<?=base_url('home/pembayaran')?>" class="btn  btn-success col-md-11">Beli Sekarang</a>
+					
+					<a href="<?=base_url()?>" class=" btn btn-info mt-1 col-md-11">Tambah ke keranjang</a>
+
+					</li>
 					</div>
 				</div>
 			</div>
-
-				<li type="none"><?=$mhs['nama']?>
-					<a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-pill badge-info float-right ml-1">Detail</a>
-					<a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-pill badge-success float-right ml-1">Ubah</a>
-					<a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-pill badge-danger float-right ml-1 tombol-hapus" >Hapus</a>
+			<br>
 					<?php endforeach;?>
-				</li>
+				
 			</ul>
 		</div>
 	</div>

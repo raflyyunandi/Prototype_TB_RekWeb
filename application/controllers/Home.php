@@ -7,10 +7,11 @@
 	{
 		
 		$data['title'] = 'R.A.F Shop Index';
-		$data['judul'] = 'Halaman Home';
-
 		$this->load->model('Mahasiswa_model');
 		$data['mhs'] = $this->Mahasiswa_model->getAllMahasiswa();
+		if ($this->input->post('keyword')) {
+		$data['mhs'] = $this->Mahasiswa_model->cariDataMahasiswa();
+		}
 		$data['user'] = '.jpg';
 		$this->load->view('templates/home_header', $data);
 		$this->load->view('home/index', $data);
@@ -19,15 +20,17 @@
 
 	public function pembayaran()
 	{
-		$this->load->view('templates/home_header');
-		$this->load->view('home/pembayaran');
+		$data['title'] = 'Halaman Pembayaran';
+		$this->load->view('templates/home_header', $data);
+		$this->load->view('home/pembayaran', $data);
 		$this->load->view('templates/home_footer');
 	}
 
 	public function keranjang()
 	{
-		$this->load->view('templates/home_header');
-		$this->load->view('home/pembayaran');
+		$data['title'] = 'Halaman Keranjang';
+		$this->load->view('templates/home_header', $data);
+		$this->load->view('home/keranjang', $data);
 		$this->load->view('templates/home_footer');
 	}
 
