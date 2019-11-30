@@ -18,6 +18,24 @@
             </div>
         </div>
     </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>SELAMAT DATANG MASTER</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                            <a class="btn hvr-hover" href="<?= base_url('admin/tambah')?>"><h1 style="color: white; padding: 5px;">Tambah Barang Baru</h1></a>
+                    </div>
+                </div>
+            </div>
+            </div>
     <!-- End All Title Box -->
     <div class="cart-box-main">
         <div class="container">
