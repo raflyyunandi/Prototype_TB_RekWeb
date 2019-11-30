@@ -34,11 +34,6 @@
         </a>
   </div>
 
-  <div class="box-add-products" id="s">
-        <div class="container">
-           <h1 align="center">Class 1</h1>
-        </div>
-    </div>
    <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
@@ -61,6 +56,7 @@
                      <div class="why-text">
                             <h4>Read More sit amet</h4>
                             <h5> $9.79</h5>
+                            <a href="#"><h5 class=" btn-primary"> $9.79</h5></a>
                         </div>
                 </div>
 
@@ -74,38 +70,6 @@
                             <h5> $9.79</h5>
                         </div>
                 </div>
-                
-                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
-                    </div>
-                     <div class="why-text">
-                            <h4>Read More sit amet</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                </div>
-
-                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
-                    </div>
-                     <div class="why-text">
-                            <h4>Read More sit amet</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                </div>
-
-                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
-                    </div>
-                     <div class="why-text">
-                            <h4>Read More sit amet</h4>
-                            <h5> $9.79</h5>
-                        </div>
 
                 </div>
             </div>
@@ -116,7 +80,7 @@
 
     <div class="box-add-products">
         <div class="container">
-            
+
         </div>
     </div>
 
@@ -178,7 +142,7 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  background-image: url("");
   margin: 2px;
   overflow: hidden;
   text-indent: -99999px;
