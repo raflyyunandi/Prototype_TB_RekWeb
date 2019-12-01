@@ -23,6 +23,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
+                        <br>
                         <h1>SELAMAT DATANG MASTER</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
                     </div>
@@ -41,91 +42,55 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="table-main table-responsive">
+                    <div class="table-main">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Images</th>
-                                    <th>Product Name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Remove</th>
+                                    <th>No</th>
+                                    <th>Nama barang</th>
+                                    <th>Jenis barang</th>
+                                    <th>Harga barang</th>
+                                    <th>Stock barang</th>
+                                    <th>Image barang</th>
+                                    <th>Deskripsi barang</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $i=0; ?>
+                                <?php foreach ($barang as $key) : ?>
                                 <tr>
                                     <td class="thumbnail-img">
-                                        <a href="#">
-                                    <img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
-                                </a>
+                                        <?= ++$i; ?>
                                     </td>
                                     <td class="name-pr">
-                                        <a href="#">
-                                    Lorem ipsum dolor sit amet
-                                </a>
+                                        <a href="#"><?= $key['nama_barang'] ?></a>
                                     </td>
                                     <td class="price-pr">
-                                        <p>$ 80.0</p>
+                                        <p><?= $key['jenis_barang'] ?></p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    
+                                         <td class="price-pr">
+                                        <p><?= $key['harga_barang'] ?></p>
+                                    </td>
+                                     <td class="price-pr">
+                                        <p><?= $key['stock_barang'] ?></p>
+                                    </td>
+                                        
+                                     <td class="price-pr">
+                                        <p><?= $key['img_barang'] ?></p>
+                                    </td>
                                     <td class="total-pr">
-                                        <p>$ 80.0</p>
+                                        <p><?= $key['deskripsi_barang'] ?></p>
                                     </td>
                                     <td class="remove-pr">
-                                        <a href="#">
-                                    <i class="fas fa-times"></i>
-                                </a>
+                                    <a href="<?= base_url('admin/edit')?>"><i class="fas fa-plus"></i></a>
+                                    <a href=""><i class="fas fa-times"></i></a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-                                    <img class="img-fluid" src="images/img-pro-02.jpg" alt="" />
-                                </a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                    Lorem ipsum dolor sit amet
-                                </a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 60.0</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-                                    <i class="fas fa-times"></i>
-                                </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-                                    <img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
-                                </a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                    Lorem ipsum dolor sit amet
-                                </a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 30.0</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-                                    <i class="fas fa-times"></i>
-                                </a>
-                                    </td>
-                                </tr>
+                            <?php endforeach; ?>
+                            
+
                             </tbody>
                         </table>
                     </div>
