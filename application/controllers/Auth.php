@@ -11,7 +11,6 @@ class Auth extends CI_Controller{
 
     public function index(){
          if ($this->session->userdata('email')){
-            redirect('user');
         }
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -29,9 +28,7 @@ class Auth extends CI_Controller{
     private function _login(){
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-
         $user= $this->db->get_where('user', ['email' => $email])->row_array();
-
         if ($user) {
             if($user['is_active']== 1){
             if(password_verify($password, $user['password'])){
@@ -103,4 +100,6 @@ class Auth extends CI_Controller{
     public function blocked(){
        $this->load->view('auth/blocked');
     }
+
+    
 }
