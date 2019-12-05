@@ -5,20 +5,33 @@ class User extends CI_Controller{
 
     public function __construct() {
         parent::__construct();
-        is_logged();
     }
     
     public function index(){
+        $data['title'] = "Index Shop";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/index', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function profile(){
         $data['title'] = "My Profile";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
-        
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('user/index', $data);
-        $this->load->view('templates/footer');
-        
+        $this->load->view('user/profile', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function cart(){
+        $data['title'] = "My Cart";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/cart', $data);
+        $this->load->view('templates/ecommerce_footer');
     }
 
     public function edit(){
@@ -105,4 +118,17 @@ class User extends CI_Controller{
             }
         }
     }
+
+    public function topupthebalance(){
+        $data['title'] = 'Top Up Balance';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('user/topupthebalance', $data);
+            $this->load->view('templates/footer');
+        }
+        }
 }

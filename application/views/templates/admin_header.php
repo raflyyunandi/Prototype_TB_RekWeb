@@ -26,22 +26,20 @@
 <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="">R.A.F</a>
+                <a href="<?= base_url('')?>">R.A.F</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="<?= base_url('')?>">Back</a></li>
+                    <li><a href="<?= base_url('admin')?>">My Action</a></li>
+                    <li><a href="<?= base_url('auth/logout')?>">Logout</a></li>
                 </ul>
             </div>
           
         </div>
     </nav>
-  <div style=" 
-     background: #060606;
-     padding: 40px 0px;
-     "><br></div>
-    <!-- Start All Title Box -->
-   
+
+    
+
 <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?= base_url('assets/')?>js/js.js"></script>

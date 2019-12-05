@@ -11,7 +11,6 @@ class Auth extends CI_Controller{
 
     public function index(){
          if ($this->session->userdata('email')){
-            redirect('user');
         }
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -29,9 +28,7 @@ class Auth extends CI_Controller{
     private function _login(){
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-
         $user= $this->db->get_where('user', ['email' => $email])->row_array();
-
         if ($user) {
             if($user['is_active']== 1){
             if(password_verify($password, $user['password'])){
@@ -181,7 +178,6 @@ class Auth extends CI_Controller{
         }
     }
     public function logout(){
-        
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> You have been Logged Out !</div>');
@@ -193,6 +189,7 @@ class Auth extends CI_Controller{
        $this->load->view('auth/blocked');
     }
 
+<<<<<<< HEAD
 
     public function forgotPassword()
     {
@@ -283,4 +280,7 @@ class Auth extends CI_Controller{
         }
     }
 
+=======
+    
+>>>>>>> Tahap2
 }
