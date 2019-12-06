@@ -1,8 +1,6 @@
 
-    <div style=" 
-    background: #060606;
-    padding: 40px 0px;
-    "><br></div>
+<div style=" background: #060606; padding: 40px 0px;"><br></div>
+
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">
@@ -22,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
-                <img src="<?= base_url('assets/img/profile/').$user['image']?>" class="card-img" alt="...">
+                <img src="<?= base_url('assets/img/').$user['image']?>" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -43,14 +41,14 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Ganti Profile</a>
+                        <a class="btn hvr-hover" href="<?= base_url('user/ganti')?>">Ganti Profile</a>
                     </div>
                     
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Isi Saldo</a>
+                        <a class="btn hvr-hover" href="<?= base_url('user/topup')?>">Isi Saldo</a>
                     </div>
                     
                 </div>
@@ -58,7 +56,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Ubah Password</a>
+                        <a class="btn hvr-hover" href="<?= base_url('user/ubahpass')?>">Ubah Password</a>
                     </div>
                     
                 </div>

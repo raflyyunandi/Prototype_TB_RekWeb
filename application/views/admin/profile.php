@@ -1,8 +1,6 @@
 
-    <div style=" 
-    background: #060606;
-    padding: 40px 0px;
-    "><br></div>
+<div style=" background: #060606; padding: 40px 0px;"><br></div>
+
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">

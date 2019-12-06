@@ -1,10 +1,5 @@
 
-
-<div style=" 
-background: #060606;
-padding: 40px 0px;
-"><br></div>
-
+<div style=" background: #060606; padding: 40px 0px;"><br></div>
 
 <div class="contact-box-main">
     <div class="container">
@@ -17,6 +12,7 @@ padding: 40px 0px;
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <input type="hidden" class="form-control" name="id" value="<?= $data['id'] ?>">
                                     <input type="text" class="form-control" name="nama_barang" value="<?= $data['nama_barang'] ?>">
                                     <div class="help-block with-errors"></div>
                                 </div>

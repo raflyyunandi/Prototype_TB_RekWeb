@@ -5,6 +5,7 @@ class User extends CI_Controller{
 
     public function __construct() {
         parent::__construct();
+        is_logged();
     }
     
     public function index(){
@@ -31,6 +32,33 @@ class User extends CI_Controller{
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/cart', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+     public function ganti(){
+        $data['title'] = "My ganti";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/ganti', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function topup(){
+        $data['title'] = "My ganti";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/topup', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function ubahpass(){
+        $data['title'] = "My ganti";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/ubahpass', $data);
         $this->load->view('templates/ecommerce_footer');
     }
 
@@ -122,7 +150,6 @@ class User extends CI_Controller{
     public function topupthebalance(){
         $data['title'] = 'Top Up Balance';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);

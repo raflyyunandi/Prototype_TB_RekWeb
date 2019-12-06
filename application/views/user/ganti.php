@@ -1,5 +1,6 @@
-<!-- Begin Page Content -->
-<div class="container-fluid">
+<div style=" background: #060606; padding: 40px 0px;"><br></div>
+   <!-- Begin Page Content -->
+<div class="container">
 
 <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
@@ -30,6 +31,7 @@
                             <div class="col-sm-9">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="image" name="image">
+                         
                                 <label class="custom-file-label" for="image">Choose file</label>
                             </div>
                         </div>
