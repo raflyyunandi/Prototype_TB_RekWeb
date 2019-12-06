@@ -123,6 +123,7 @@ class Admin extends CI_Controller {
                   $this->db->set($data);
                   $this->db->where('id', $id);
                   $this->db->update('barang');
+				  $this->session->set_flashdata('flash', 'Diubah');
                   redirect('admin');
               }else {
                   die("gagal update");
@@ -136,6 +137,7 @@ class Admin extends CI_Controller {
     public function hapus($id)
         {
             $this->Admin_model->hapusDataBarang($id);
+			$this->session->set_flashdata('flash', 'Dihapus');
             redirect('admin');
         }
 }
