@@ -1,5 +1,18 @@
 
-   
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <!-- <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Data Barang <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+    <?php endif; ?>
+
 <div style=" background: #060606; padding: 40px 0px;"><br></div>
     <!-- Start All Title Box -->
     <div class="all-title-box">

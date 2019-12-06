@@ -68,6 +68,7 @@ class Admin extends CI_Controller {
               'image'        => $foto['file_name'],
           );
             $this->Admin_model->insert($data);
+            $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('admin');
         }else {
           die("gagal upload");
@@ -122,6 +123,7 @@ class Admin extends CI_Controller {
                   $this->db->set($data);
                   $this->db->where('id', $id);
                   $this->db->update('barang');
+                  $this->session->set_flashdata('flash', 'Diubah');
                   redirect('admin');
               }else {
                   die("gagal update");
