@@ -82,7 +82,7 @@
                                     </td>
                                     <td class="remove-pr">
                                     <a href="<?= base_url('admin/edit')?>/<?=$key['id']?>"><i class="fas fa-plus"></i></a>
-                                    <a href=""><i class="fas fa-times"></i></a>
+                                    <a href="<?= base_url('admin/hapus')?>/<?=$key['id']?>"><i class="fas fa-times"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

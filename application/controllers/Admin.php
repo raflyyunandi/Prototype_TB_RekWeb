@@ -131,4 +131,11 @@ class Admin extends CI_Controller {
         }
     }
 
+
+    public function hapus($id)
+        {
+            $this->Admin_model->hapusDataBarang($id);
+            $this->session->set_flashdata('flash','dihapus');
+            redirect('admin');
+        }
 }
