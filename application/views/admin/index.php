@@ -46,7 +46,20 @@
                     </div>
                 </div>
             </div>
-            </div>
+           
+            <div class="row">
+        <div class="col-md-4" >
+            <form action="" method="post">
+                <div class="input-group mb-0 ">
+                  <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
+                  <div class="input-group-append">
+                  <button class="btn hvr-hover" type="submit"><h1 style="color: white; padding: 0px;">Search</h1></button>
+                  </div>
+                </div>
+            </form>
+        </div>
+ </div>
+    </div>
     <!-- End All Title Box -->
     <div class="cart-box-main">
         <div class="container">
@@ -106,5 +119,11 @@
                     </div>
                 </div>
             </div>
+            <?php if(empty($barang) ) : ?>
+                <div class="alert alert-danger" role="alert">
+                 Data Barang Tidak ditemukan
+                </div>
+            <?php endif; ?>
+        
         </div>
     </div>
