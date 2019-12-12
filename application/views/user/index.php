@@ -46,6 +46,7 @@
                       <div class="why-text">
                         <h4><?= $key['nama_barang']?></h4>
                         <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
+                        <a href="" ><h5>Add to Cart</h5></a>
                     </div>
                 </div>
                 <?php endforeach ?>
@@ -53,7 +54,6 @@
         </div>
     </div>
     <!-- End Categories -->
-
 
     <div class="box-add-products">
         <div class="container">
