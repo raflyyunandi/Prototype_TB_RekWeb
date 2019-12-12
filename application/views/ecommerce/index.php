@@ -3,21 +3,21 @@
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
+      <div class="carousel-item active" style="background-image: url('assets/img/filamen.jpg'); height: 700px;">
         <div align = "center" class="cover-slides" style="padding-top: 400px;">
           <h1 >First Slide</h1>
           <p class="lead">This is a description for the first slide.</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
+      <div class="carousel-item" style="background-image: url('assets/img/fila2.jpg'); height: 700px;">
         <div align = "center" class="cover-slides" style="padding-top: 400px;">
           <h1  >Second Slide</h1>
           <p class="lead">This is a description for the second slide.</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
+      <div class="carousel-item" style="background-image: url('assets/img/rawat.png'); height: 700px;">
         <div align = "center" class="cover-slides" style="padding-top: 400px;">
           <h1 >Third Slide</h1>
           <p class="lead">This is a description for the third slide.</p>

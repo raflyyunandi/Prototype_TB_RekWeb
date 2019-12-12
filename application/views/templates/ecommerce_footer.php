@@ -13,7 +13,7 @@
 
 </body>
 
-</html>
+
 <footer>
     <div class="footer-main">
         <div class="container">
@@ -31,7 +31,7 @@
                         <div class="footer-link">
                             <h4>Information</h4>
                             <div class="footer-widget">
-                                <p> Apa yang dikerjakan dengan lieru</p>
+                                <p>Web ini merupakan sebuah web untuk mempermudah customer membeli barang di R.A.F Shop</p>
                             </div>
                         </div>
                     </div>
@@ -59,4 +59,5 @@
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-        </div>
+    </div>
+</html>
