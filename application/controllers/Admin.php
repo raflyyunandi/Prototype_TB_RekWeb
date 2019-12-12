@@ -2,8 +2,6 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
-    
-    
     public function __construct() {
         parent::__construct();
         is_logged();
@@ -69,12 +67,9 @@ class Admin extends CI_Controller {
             $this->Admin_model->insert($data);
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('admin');
-        }else {
-          die("gagal upload");
-      }
-  }else {
-      redirect('admin/error');
+        }
   }
+      redirect('admin/error');
 }
 
     public function edit($id)
@@ -124,14 +119,10 @@ class Admin extends CI_Controller {
                   $this->db->update('barang');
 				  $this->session->set_flashdata('flash', 'Diubah');
                   redirect('admin');
-              }else {
-                  die("gagal update");
               }
-          }else {
+          }
             redirect('admin/error');
-        }
     }
-
 
     public function hapus($id)
         {

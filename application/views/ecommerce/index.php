@@ -38,118 +38,19 @@
     <div class="categories-shop">
         <div class="container">
             <div class="row ">
+                <?php foreach ($barang as $key ) : ?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt="" />
+                        <a class="btn hvr-hover" href="<?= base_url('auth')?>">Read More</a>
                     </div>
-                     <div class="why-text">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
+                      <div class="why-text">
+                        <h4><?= $key['nama_barang']?></h4>
+                        <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
                     </div>
-                     <div class="why-text">
-                            <h4>Read More sit amet</h4>
-                            <h5> $9.79</h5>
-                            <a href="#"><h5 class=" btn-primary"> $9.79</h5></a>
-                        </div>
                 </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
-                    </div>
-                     <div class="why-text">
-                            <h4>Read More sit amet</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                </div>
-
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
     <!-- End Categories -->
-
-
-    <div class="box-add-products">
-        <div class="container">
-
-        </div>
-    </div>
-
-    <style type="text/css">
-        #slides {
-  position: relative;
-}
-#slides .slides-container {
-  display: none;
-}
-#slides .scrollable {
-  *zoom: 1;
-  position: relative;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
-}
-#slides .scrollable:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.slides-navigation {
-  margin: 0 auto;
-  position: absolute;
-  z-index: 3;
-  top: 46%;
-  width: 100%;
-}
-.slides-navigation a {
-  position: absolute;
-  display: block;
-}
-.slides-navigation a.prev {
-  left: 0;
-}
-.slides-navigation a.next {
-  right: 0;
-}
-
-.slides-pagination {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-}
-.slides-pagination a {
-  border: 2px solid #222;
-  border-radius: 0px;
-  width: 30px;
-  height: 30px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  background-image: url("");
-  margin: 2px;
-  overflow: hidden;
-  text-indent: -99999px;
-  text-align: center;
-}
-.slides-pagination a.current {
-  background: #222;
-}
-
-    </style>

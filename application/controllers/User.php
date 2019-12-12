@@ -11,11 +11,23 @@ class User extends CI_Controller{
     }
     
     public function index(){
+        $data['barang'] = $this->Admin_model->getAllBarang();
         $data['title'] = "Index Shop";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/index', $data);
+        $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function detail($id){
+        $data['barang'] = $this->Admin_model->getAllBarang();
+        $data['title'] = "Detail Barang";
+        $data['data'] = $this->Admin_model->getBarangById($id);
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/detail', $data);
         $this->load->view('templates/ecommerce_footer');
     }
 
