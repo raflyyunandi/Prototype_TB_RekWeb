@@ -6,6 +6,8 @@ class User extends CI_Controller{
     public function __construct() {
         parent::__construct();
         is_logged();
+        $this->load->model('Admin_model');
+
     }
     
     public function index(){
@@ -39,6 +41,7 @@ class User extends CI_Controller{
         $data['title'] = "My ganti";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
+
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/ganti', $data);
         $this->load->view('templates/ecommerce_footer');
@@ -46,10 +49,10 @@ class User extends CI_Controller{
 
     public function topup(){
         $data['title'] = "My ganti";
-        $data['user'] = $this->db->get_where('user', ['email'=>
+        $data['data'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
-        $this->load->view('user/topup', $data);
+        return $this->load->view('user/topup', $data);
         $this->load->view('templates/ecommerce_footer');
     }
 
@@ -60,6 +63,35 @@ class User extends CI_Controller{
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/ubahpass', $data);
         $this->load->view('templates/ecommerce_footer');
+    }
+
+   public function edita($id)
+    {
+      $data['title'] = "Ubah barang";
+      $data['data'] = $this->Admin_model->getBarangById($id);
+      $this->load->view('templates/admin_header', $data);
+      return $this->load->view('user/edit',$data);
+      $this->load->view('templates/ecommerce_footer');
+    }
+
+    public function isisaldo() {
+        $saldo   = $this->input->post('saldo');
+        $tambahanS   = $this->input->post('tambahanS');
+        $id   = $this->input->post('id');
+        
+        $saldo = $tambahanS + $saldo;
+
+        $data = array(
+          'id'  => $id,
+          'saldo'  => $saldo,
+        );
+        // hapus foto pada direktori
+
+        $this->db->set($data);
+        $this->db->where('id', $id);
+        $this->db->update('user');
+
+        redirect('user/profile');
     }
 
     public function edit(){
@@ -117,11 +149,9 @@ class User extends CI_Controller{
         $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[3]|matches[new_password1]');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar', $data);
-            $this->load->view('templates/topbar', $data);
+            $this->load->view('templates/admin_header', $data);
             $this->load->view('user/changepassword', $data);
-            $this->load->view('templates/footer');
+            $this->load->view('templates/ecommerce_footer');
         } else {
             $current_password = $this->input->post('current_password');
             $new_password = $this->input->post('new_password1');
@@ -147,15 +177,4 @@ class User extends CI_Controller{
         }
     }
 
-    public function topupthebalance(){
-        $data['title'] = 'Top Up Balance';
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar', $data);
-            $this->load->view('templates/topbar', $data);
-            $this->load->view('user/topupthebalance', $data);
-            $this->load->view('templates/footer');
-        }
-        }
 }

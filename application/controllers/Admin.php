@@ -40,7 +40,6 @@ class Admin extends CI_Controller {
 
     public function insertdata()
     {
-
       $nama_barang   = $this->input->post('nama_barang');
       $jenis_barang   = $this->input->post('jenis_barang');
       $harga_barang   = $this->input->post('harga_barang');

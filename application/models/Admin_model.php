@@ -15,6 +15,10 @@ class Admin_model extends CI_model{
 		return $this->db->get_where('barang', ['id'=> $id])->row_array();
 	}
 
+	public function getUserById($id_user){
+		return $this->db->get_where('user', ['id'=> $id_user])->row_array();
+	}
+
     public function hapusDataBarang($id)
     {
       $this->db->where('id',$id);
