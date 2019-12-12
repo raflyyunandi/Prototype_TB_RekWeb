@@ -12,6 +12,10 @@ class Admin extends CI_Controller {
 
     public function index() {
         $data['barang'] = $this->Admin_model->getAllBarang();
+         if( $this->input->post('keyword')) {
+        $data['barang'] = $this->Admin_model->cariDataBarang();
+          }
+
         $data['title'] = "Dashboard";
         $data['user'] = $this->db->get_where('user', ['email'=>
             $this->session->userdata('email')])->row_array();
