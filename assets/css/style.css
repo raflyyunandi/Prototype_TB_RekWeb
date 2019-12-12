@@ -100,8 +100,59 @@ a, .nav ,.navlinks{
  p{
      margin: 0px;
 }
+.shop-cat-box:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-/* Footer dibawah */
+/* Footer Main di bawah */
+
+footer{
+    margin-top: 200px;
+    
+}
+.footer-main {
+    background-color: darkslateblue;
+    font-family: sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+.footer-main p{
+    color: white;
+    font-style: bold;
+    margin: 0;
+
+}
+.footer-main h4{
+    color: white;
+    font-style: bold;
+    margin: 0;
+
+}
+.footer-main a, li{
+    color: white;
+}
+.footer-main a:hover {
+    color: black;
+}
+
+/* Copy rigth */
+.footer-copyright{
+    background: #060606;
+    padding: 20px 0px;
+    position: relative;
+}
+.footer-copyright p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+}
+.footer-copyright p a{
+    color: #ffffff;
+}
+.footer-copyright p a:hover{
+    color: grey;
+}
 
 
  

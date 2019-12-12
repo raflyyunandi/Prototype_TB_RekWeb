@@ -57,7 +57,7 @@
     </footer>
 
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a></p>
+        <p class="footer-company">All Rights Reserved. &copy; 2019 <a href="#">ThewayShop</a> Design By :
+            <a href="#">Kelompok 4</a></p>
     </div>
 </html>
