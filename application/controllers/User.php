@@ -127,9 +127,7 @@ class User extends CI_Controller{
         $saldo   = $this->input->post('saldo');
         $tambahanS   = $this->input->post('tambahanS');
         $id_user   = $this->input->post('id_user');
-        
         $saldo = $tambahanS + $saldo;
-
         $data = array(
           'id_user'  => $id_user,
           'saldo'  => $saldo,
@@ -148,19 +146,21 @@ class User extends CI_Controller{
         $saldo = $this->input->post('saldo');
         $harga_barang = $this->input->post('harga_barang');
         $beli = $this->input->post('beli');
+        $id_user = $this->input->post('id_user');
+
         $b = $harga_barang * $beli;
         $c = $saldo - $b;
-        
-        if($c > 0) {
-            echo "Pembayaran Berhasil";
-        } else {
-            redirect('user');
-        }
-
         $d = $stock_barang - $beli;
-        if ($d > 0) {
+        if($c > 0) {
+            $data = array(
+            'saldo'  => $c,
+            );
+            $this->db->set($data);
+            $this->db->where('id_user', $id_user);
+            $this->db->update('user');
+        }  if ($d > 0) {
            $data = array(
-          'stock_barang'  => $stock_barang,
+          'stock_barang'  => $d,
           'id_barang'  => $id_barang,
         );
         $this->db->set($data);
@@ -169,7 +169,6 @@ class User extends CI_Controller{
         } else {
             echo "error";
         }
-        //redirect('user');
     }
 
     public function edit(){

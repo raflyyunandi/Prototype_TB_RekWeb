@@ -110,6 +110,7 @@
                     <input type="hidden" name="saldo" value="<?= $key['saldo']; ?>">
                     <input type="hidden" name="harga_barang" value="<?= $key['harga_barang']; ?>">
                     <input type="hidden" name="beli" value="<?= $key['beli']; ?>">
+                    <input type="hidden" name="id_user" value="<?= $key['id_user']; ?>">
                     <button class="ml-auto btn hvr-hover" type="submit" name="checkout" >Checkout</button>
                 </div>
                 </form> 

@@ -17,7 +17,7 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="hidden" class="form-control" name="id" value="<?= $data['id_user'] ?>">
+                                    <input type="hidden" class="form-control" name="id_user" value="<?= $data['id_user'] ?>">
                                     <h1>Saldo saya : <?= $data['saldo']?></h1>
                                     <select name="tambahanS" id="tambahanS" class="form-control">
                                         <option selected>Pilih Jenis barang</option>
