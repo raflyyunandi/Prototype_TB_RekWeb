@@ -28,6 +28,10 @@ class Admin_model extends CI_model{
 		return $this->db->get_where('user', ['id_user'=> $id_user])->row_array();
 	}
 
+	public function getOrderByUser($id_user){
+		return $this->db->get_where('order_user', ['id_user'=> $id_user])->row_array();
+	}
+
     public function hapusDataBarang($id)
     {
       $this->db->where('id_barang',$id);

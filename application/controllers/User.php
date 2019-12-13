@@ -42,21 +42,32 @@ class User extends CI_Controller{
     }
 
     public function cart(){
+        $id = "30";
+        $this->db->select('*');
+        $this->db->from('order_user a'); 
+        $this->db->join('barang b', 'b.id_barang=a.id_barang');
+        $this->db->join('user c', 'c.id_user=a.id_user');
+        $this->db->where('c.id_user',$id);
+        $data['b'] = $this->db->get()->result_array(); 
+        
         $data['title'] = "My Cart";
-        $data['user'] = $this->db->get_where('user', ['email'=>
-        $this->session->userdata('email')])->row_array();
+        // $data['user'] = $this->db->get_where('user', ['email'=>
+        // $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/cart', $data);
         $this->load->view('templates/ecommerce_footer');
+
     }
 
     public function cartadd(){
         $id_barang   = $this->input->post('id_barang');
         $id_user   = $this->input->post('id_user');
+        $beli   = $this->input->post('beli');
 
         $data = array(
               'id_barang'  => $id_barang,
               'id_user'  => $id_user,
+              'beli'  => $beli,
           );
         
         $this->Admin_model->setOrder($data);
@@ -91,28 +102,40 @@ class User extends CI_Controller{
         $this->load->view('templates/ecommerce_footer');
     }
 
-   public function edita($id)
+   public function updatecart()
     {
-      $data['title'] = "Ubah barang";
-      $data['data'] = $this->Admin_model->getBarangById($id);
-      $this->load->view('templates/admin_header', $data);
-      return $this->load->view('user/edit',$data);
-      $this->load->view('templates/ecommerce_footer');
+        $id_barang   = $this->input->post('id_barang');
+        $id_user   = $this->input->post('id_user');
+        $beli   = $this->input->post('beli');
+        $id   = $this->input->post('id');
+
+        $data = array(
+              'id_barang'  => $id_barang,
+              'id_user'  => $id_user,
+              'id'  => $id,
+              'beli'  => $beli,
+          );
+        
+        $this->db->set($data);
+        $this->db->where('id', $id);
+        $this->db->update('order_user');
+        
+        redirect('user/cart');
     }
 
     public function isisaldo() {
         $saldo   = $this->input->post('saldo');
         $tambahanS   = $this->input->post('tambahanS');
-        $id   = $this->input->post('id');
+        $id_user   = $this->input->post('id_user');
         
         $saldo = $tambahanS + $saldo;
 
         $data = array(
-          'id'  => $id,
+          'id_user'  => $id_user,
           'saldo'  => $saldo,
         );
         $this->db->set($data);
-        $this->db->where('id', $id);
+        $this->db->where('id_user', $id_user);
         $this->db->update('user');
 
         redirect('user/profile');

@@ -24,34 +24,35 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="table-main table-responsive">
+                        <form action="<?= base_url('user/updatecart')?>" method="post">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>Image</th>
                                     <th>Nama Produk</th>
                                     <th>Harga</th>
-                                    <th>Jumlah</th>
-                                    <th>Total</th>
+                                    <th>Yang Dibeli</th>
+                                    <th>Stock Ada</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach ($b as $key): ?>
+                                <input type="hidden" name="id" value="<?= $key['id'] ?>">
                                 <tr>
-                                    <td >
-									<img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
+                                    <td>
+									<img class="img-fluid" width="100" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt=""/>
 								</a>
                                     </td>
                                     <td class="name-pr">
-                                        <a href="#">
-									Lorem ipsum dolor sit amet
-								</a>
+									<?= $key['nama_barang']?>
                                     </td>
                                     <td class="price-pr">
-                                        <p>$ 80.0</p>
+                                        <p>Rp. <?= $key['harga_barang']?>,-</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="quantity-box"><input name="beli" type="number" size="4" value="<?= $key['beli']?>" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr">
-                                        <p>$ 80.0</p>
+                                        <p><?= $key['stock_barang']?></p>
                                     </td>
                                     <td class="remove-pr">
                                         <a href="#">
@@ -59,54 +60,8 @@
 								</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="images/img-pro-02.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-									Lorem ipsum dolor sit amet
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 60.0</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-									Lorem ipsum dolor sit amet
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 30.0</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
+                                <?php endforeach ?>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -114,7 +69,7 @@
             </div>
 
             <div class="row my-5">
-                <div class="col-lg-6 col-sm-6">
+                <div class="col-lg-10 col-sm-6">
                     <div class="coupon-box">
                         <div class="input-group input-group-sm">
                             <input class="form-control" placeholder="Enter your coupon code" aria-label="Coupon code" type="text">
@@ -124,13 +79,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="update-box">
-                        <input value="Update Cart" type="submit">
+                    <div class="update-box" >
+                    <input type="hidden" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
+                    <input type="hidden" class="form-control" name="id_user" value="<?= $key['id_user'] ?>">
+                    <input type="submit" name="updatecart" value="Update Cart">
                     </div>
-                </div>
             </div>
-    
+        </form>
+
       <div class="row my-5">
                 <div class="col-lg-8 col-sm-12"></div>
                 <div class="col-lg-4 col-sm-12">
