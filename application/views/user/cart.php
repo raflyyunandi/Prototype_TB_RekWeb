@@ -37,8 +37,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
+                                    <td >
 									<img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
 								</a>
                                     </td>

@@ -41,15 +41,25 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt="" />
-                        <a class="btn hvr-hover" href="<?= base_url('user/detail')?>/<?=$key['id']?>">Detail</a>
+                        <a class="btn hvr-hover" href="<?= base_url('user/detail')?>/<?=$key['id_barang']?>">Detail</a>
                     </div>
                       <div class="why-text">
                         <h4><?= $key['nama_barang']?></h4>
                         <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
-                        <a href="" ><h5>Add to Cart</h5></a>
+
+                        <form action="<?= base_url('user/cartadd')?>" method="post">
+                          <input type="text" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
+                          <input type="text" class="form-control" name="id_user" value="<?= $user['id_user'] ?>">
+                        <button type="submit" name="cart"><h5>Add to Cart</h5></button>
+                        </form>
+
+                        <hr>
+                     </div>
                     </div>
-                </div>
+                    <hr>
+
                 <?php endforeach ?>
+
             </div>
         </div>
     </div>

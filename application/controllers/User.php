@@ -12,6 +12,7 @@ class User extends CI_Controller{
     
     public function index(){
         $data['barang'] = $this->Admin_model->getAllBarang();
+        $data['order'] = $this->Admin_model->getAllOrder();
         $data['title'] = "Index Shop";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
@@ -49,11 +50,23 @@ class User extends CI_Controller{
         $this->load->view('templates/ecommerce_footer');
     }
 
+    public function cartadd(){
+        $id_barang   = $this->input->post('id_barang');
+        $id_user   = $this->input->post('id_user');
+
+        $data = array(
+              'id_barang'  => $id_barang,
+              'id_user'  => $id_user,
+          );
+        
+        $this->Admin_model->setOrder($data);
+        redirect('user/cart');
+    }
+
      public function ganti(){
         $data['title'] = "My ganti";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
-
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/ganti', $data);
         $this->load->view('templates/ecommerce_footer');
@@ -66,6 +79,7 @@ class User extends CI_Controller{
         $this->load->view('templates/topbar', $data);
         return $this->load->view('user/topup', $data);
         $this->load->view('templates/ecommerce_footer');
+
     }
 
     public function ubahpass(){
@@ -97,8 +111,6 @@ class User extends CI_Controller{
           'id'  => $id,
           'saldo'  => $saldo,
         );
-        // hapus foto pada direktori
-
         $this->db->set($data);
         $this->db->where('id', $id);
         $this->db->update('user');
