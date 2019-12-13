@@ -101,14 +101,15 @@
                                     </td>
                                         
                                      <td class="price-pr">
+                                        <img width="80" src="<?= base_url('assets/')?>img/<?= $key['image']?>">
                                         <p><?= $key['image'] ?></p>
                                     </td>
                                     <td class="total-pr">
                                         <p><?= $key['deskripsi_barang'] ?></p>
                                     </td>
                                     <td class="remove-pr">
-                                    <a href="<?= base_url('admin/edit')?>/<?=$key['id']?>"><i class="fas fa-plus"></i></a>
-                                    <a href="<?= base_url('admin/hapus')?>/<?=$key['id']?>"><i class="fas fa-times"></i></a>
+                                    <a href="<?= base_url('admin/edit')?>/<?=$key['id_barang']?>"><i class="fas fa-plus"></i></a>
+                                    <a href="<?= base_url('admin/hapus')?>/<?=$key['id_barang']?>"><i class="fas fa-times"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

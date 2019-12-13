@@ -98,14 +98,13 @@
                         </div>
                         <div class="d-flex">
                             <h4>Discount Coupon</h4>
-                            <div class="ml-auto font-weight-bold">Rp. 2000,- </div>
+                            <div class="ml-auto font-weight-bold">0</div>
                         </div>
                         <hr class="my-1">
                 </div>
                 </div>
                 <form method="post" action="<?= base_url('user/checkout')?>">
                 <div class="col-12 d-flex shopping-box">
-                    <p>kalukulasi</p>
                     <input type="hidden" name="stock_barang" value="<?= $p = $key['stock_barang'] - $a = $key['beli']; ?>">
                     <input type="hidden" name="id_barang" value="<?= $key['id_barang']; ?>">
                     <input type="hidden" name="saldo" value="<?= $key['saldo']; ?>">
