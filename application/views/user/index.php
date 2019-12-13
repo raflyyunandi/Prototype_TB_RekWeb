@@ -48,10 +48,11 @@
                         <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
 
                         <form action="<?= base_url('user/cartadd')?>" method="post">
-                          <input type="number" size="4" value="" name="beli" min="0" step="1" class="c-input-text qty text">
-                          <input type="text" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
-                          <input type="text" class="form-control" name="id_user" value="<?= $user['id_user'] ?>">
-                        <button type="submit" name="cart"><h5>Add to Cart</h5></button>
+                          <input type="number" size="4" value="1" name="beli" min="0" step="1" class="c-input-text qty text">
+                          <input type="hidden" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
+                          <input type="hidden" class="form-control" name="id_user" value="<?= $user['id_user'] ?>">
+                          <br>
+                        <button  type="submit" name="cart"><h5>Add to Cart</h5></button>
                         </form>
 
                         <hr>

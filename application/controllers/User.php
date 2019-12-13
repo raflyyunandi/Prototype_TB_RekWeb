@@ -115,11 +115,11 @@ class User extends CI_Controller{
               'id'  => $id,
               'beli'  => $beli,
           );
-        
+            
         $this->db->set($data);
         $this->db->where('id', $id);
         $this->db->update('order_user');
-        
+
         redirect('user/cart');
     }
 
@@ -134,11 +134,42 @@ class User extends CI_Controller{
           'id_user'  => $id_user,
           'saldo'  => $saldo,
         );
+
         $this->db->set($data);
         $this->db->where('id_user', $id_user);
         $this->db->update('user');
 
         redirect('user/profile');
+    }
+
+    public function checkout() {
+        $stock_barang = $this->input->post('stock_barang');
+        $id_barang = $this->input->post('id_barang');
+        $saldo = $this->input->post('saldo');
+        $harga_barang = $this->input->post('harga_barang');
+        $beli = $this->input->post('beli');
+        $b = $harga_barang * $beli;
+        $c = $saldo - $b;
+        
+        if($c > 0) {
+            echo "Pembayaran Berhasil";
+        } else {
+            redirect('user');
+        }
+
+        $d = $stock_barang - $beli;
+        if ($d > 0) {
+           $data = array(
+          'stock_barang'  => $stock_barang,
+          'id_barang'  => $id_barang,
+        );
+        $this->db->set($data);
+        $this->db->where('id_barang', $id_barang);
+        $this->db->update('barang');
+        } else {
+            echo "error";
+        }
+        //redirect('user');
     }
 
     public function edit(){
