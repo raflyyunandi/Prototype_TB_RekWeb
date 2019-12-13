@@ -10,6 +10,7 @@
 
         public function index(){
            if ($this->session->userdata('email')){
+            redirect('user');
            }
            $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
            $this->form_validation->set_rules('password', 'Password', 'trim|required');
