@@ -20,7 +20,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
-                <img src="<?= base_url('assets/img/').$user['image']?>" class="card-img" alt="...">
+                <img src="<?= base_url('assets/img/').$user['image'];?>" class="card-img" alt="..."> 
+          
             </div>
             <div class="col-md-8">
                 <div class="card-body">

@@ -26,7 +26,7 @@
 <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="">R.A.F</a>
+                <a href="">FRESHSHOPE</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
