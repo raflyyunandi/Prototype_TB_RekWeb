@@ -82,6 +82,7 @@
             'name' => htmlspecialchars($this->input->post('name', true)),
             'email' => htmlspecialchars($email),
             'image' => 'default.jpg',
+            'saldo' => 0,
             'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             'role_id' => 2,
             'is_active' => 1,

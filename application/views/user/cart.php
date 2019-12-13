@@ -27,10 +27,10 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Images</th>
-                                    <th>Product Name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
+                                    <th>Image</th>
+                                    <th>Nama Produk</th>
+                                    <th>Harga</th>
+                                    <th>Jumlah</th>
                                     <th>Total</th>
                                     <th>Remove</th>
                                 </tr>

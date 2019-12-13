@@ -1177,7 +1177,7 @@
  .main-instagram.owl-carousel .owl-nav button.owl-prev{
      background: #000000;
      position: absolute;
-     z-index: 1;
+     
      display: block;
      height: 100%;
      width: 50px;
@@ -1197,7 +1197,7 @@
  .main-instagram.owl-carousel .owl-nav button.owl-next{
      background: #000000;
      position: absolute;
-     z-index: 1;
+     
      display: block;
      height: 100%;
      width: 50px;

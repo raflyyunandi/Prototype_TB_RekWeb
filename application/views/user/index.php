@@ -37,45 +37,23 @@
     <div class="categories-shop">
         <div class="container">
             <div class="row ">
+                <?php foreach ($barang as $key ) : ?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt="" />
+                        <a class="btn hvr-hover" href="<?= base_url('user/detail')?>/<?=$key['id']?>">Detail</a>
                     </div>
-                     <div class="why-text">
-                            <h4>Nama Makanan</h4>
-                            <h5>Aksi</h5>
-                        </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
+                      <div class="why-text">
+                        <h4><?= $key['nama_barang']?></h4>
+                        <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
+                        <a href="" ><h5>Add to Cart</h5></a>
                     </div>
-                     <div class="why-text">
-                            <h4>Nama Makanan</h4>
-                            <h5>Aksi</h5>
-                            <a href="#"><h5 class=" btn-primary">Aksi</h5></a>
-                        </div>
                 </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Read More</a>
-                    </div>
-                     <div class="why-text">
-                            <h4>Nama Makanan</h4>
-                            <h5>Aksi</h5>
-                        </div>
-                </div>
-
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
     <!-- End Categories -->
-
 
     <div class="box-add-products">
         <div class="container">
