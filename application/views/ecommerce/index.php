@@ -1,24 +1,23 @@
 
-
+<div class="navimg" style="background-image: url('assets/img/navimg.jpg'); background-size: 20%; height: 100px;"></div>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
-          <h1 >First Slide</h1>
-          <p class="lead">This is a description for the first slide.</p>
-        </div>
+      <div class="carousel-item active imgctrl" style="background-image: url('assets/img/banner.png'); height: 550px; background-size: 100%;background-position:90%;">
+      <div align = "center" class="cover-slides" style="padding-top: 100px;">
+        <div style="background-image: url('assets/img/inilogonya.png'); height: 300px; background-size: 30%;   background-repeat: no-repeat; background-position: center;" ></div>
+      </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
+      <div class="carousel-item imgctrl" style="background-image: url('assets/img/banner-02.jpeg'); height: 550px; background-size: 100%;   background-repeat: no-repeat; background-position: top;">
+        <div align = "center" class="cover-slides" style="padding-top: 200px;">
           <h1  >Second Slide</h1>
           <p class="lead">This is a description for the second slide.</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
+      <div class="carousel-item imgctrl" style="background-image: url('assets/img/banner-02.jpeg'); background-size: 100%;   background-repeat: no-repeat; height: 550px; background-position: bottom;">
+        <div align = "center" class="cover-slides" style="padding-top: 200px;">
           <h1 >Third Slide</h1>
           <p class="lead">This is a description for the third slide.</p>
         </div>
