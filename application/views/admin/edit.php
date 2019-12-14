@@ -12,7 +12,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="hidden" class="form-control" name="id" value="<?= $data['id_barang'] ?>">
+                                    <input type="hidden" class="form-control" name="id_barang" value="<?= $data['id_barang'] ?>">
                                     <input type="text" class="form-control" name="nama_barang" value="<?= $data['nama_barang'] ?>">
                                     <div class="help-block with-errors"></div>
                                 </div>

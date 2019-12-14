@@ -1,7 +1,7 @@
 
     <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
     <?php if ($this->session->flashdata('flash')) : ?>
-    <!-- <div class="row mt-3">
+    <div class="row mt-3">
         <div class="col-md-6">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 Data Barang <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
@@ -10,7 +10,7 @@
                 </button>
             </div>
         </div>
-    </div> -->
+    </div>
     <?php endif; ?>
 
 <div style=" background: #060606; padding: 40px 0px;"><br></div>
@@ -109,7 +109,7 @@
                                     </td>
                                     <td class="remove-pr">
                                     <a href="<?= base_url('admin/edit')?>/<?=$key['id_barang']?>"><i class="fas fa-plus"></i></a>
-                                    <a href="<?= base_url('admin/hapus')?>/<?=$key['id_barang']?>"><i class="fas fa-times"></i></a>
+                                    <a href="<?= base_url('admin/hapus')?>/<?=$key['id_barang']?>" class="tombol-hapus"><i class="fas fa-times "></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
