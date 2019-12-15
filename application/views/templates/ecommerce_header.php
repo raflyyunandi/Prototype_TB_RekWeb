@@ -26,12 +26,12 @@
 <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="<?= base_url('')?>" ><img src="assets/img/logofs.png" class="logoimg" alt="ea"></a>
+                <a href="<?= base_url('')?>" ><img src="assets/img/logofs.png" class="logoimg" height="50" width="200"></a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="<?= base_url('auth/index')?>"><button type="button" class="btn btn-success">Login</button></a></li>
-                    <li><a href="<?= base_url('auth/register')?>"><button type="button" class="btn btn-success">Sign-up</button></a></li>
+                    <li><a href="<?= base_url('auth/index')?>">Login</a></li>
+                    <li><a href="<?= base_url('auth/register')?>">Sign-up</a></li>
                 </ul>
             </div>
         </div>
