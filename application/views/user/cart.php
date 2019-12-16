@@ -37,6 +37,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <?php foreach ($b as $key): ?>
                                 <input type="hidden" name="id" value="<?= $key['id'] ?>">
                                 <tr>
@@ -94,7 +95,8 @@
                         <h3>Order summary</h3>
                         <div class="d-flex">
                             <h4>Total</h4>
-                            <div class="ml-auto font-weight-bold">Rp. <?= $p = $key['harga_barang'] * $a = $key['beli']; ?> ,-</div>
+                            <div class="ml-auto font-weight-bold">
+                            </div>
                         </div>
                         <div class="d-flex">
                             <h4>Discount Coupon</h4>

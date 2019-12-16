@@ -64,6 +64,7 @@ class User extends CI_Controller
         $this->load->view('user/cart', $data);
         $this->load->view('templates/ecommerce_footer');
 
+
     }
 
     public function cartadd()
@@ -182,6 +183,15 @@ class User extends CI_Controller
         } else {
             echo "error";
         }
+
+        redirect('user/print');
+    }
+
+    public function print(){
+        $data['title'] = "PRINT";
+        $data['user'] = $this->db->get_where('user', ['email'=>
+        $this->session->userdata('email')])->row_array();
+        $this->load->view('user/print', $data);
     }
 
     public function edit()
