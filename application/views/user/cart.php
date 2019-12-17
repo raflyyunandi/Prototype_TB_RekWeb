@@ -14,9 +14,8 @@
         </div>
     </div>
     <!-- End All Title Box -->
-
-
-       <form method="post" action="">
+       <br>
+       <form method="post" action="" class="text-center">
          <button class="btn btn-dark" type="submit" name="id_user" value="<?= $get['id_user'] ?> ">TAMPILKAN</button>
        </form> 
        
@@ -58,7 +57,7 @@
                                        <p><?= $key['stock_barang']?></p>
                                     </td>
                                     <td class="remove-pr">
-                                        <a href="#">
+                                        <a href="<?= base_url('user/deletecart/')?><?= $key['id'] ?>">
 									<i class="fas fa-times"></i>
 								</a>
                                     </td>
@@ -69,6 +68,7 @@
                     </div>
                 </div>
             </div>
+        </form>
 
             <div class="row my-5">
                 <div class="col-lg-10 col-sm-6">
@@ -85,16 +85,15 @@
                     <input type="submit" name="updatecart" value="Update Cart">
                     </div>
             </div>
-        </form>
-
+        
       <div class="row my-5">
                 <div class="col-lg-8 col-sm-12"></div>
                 <div class="col-lg-4 col-sm-12">
                     <div class="order-box">
                         <h3>Order summary</h3>
                         <div class="d-flex">
-                            <h4>Total</h4>
-                            <div class="ml-auto font-weight-bold">
+                            <h4>Total : </h4>
+                            <div class="ml-auto font-weight-bold"><?= $key['harga_barang'] * $key['beli'] ?>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -107,7 +106,7 @@
                 <form method="post" action="<?= base_url('user/checkout')?>">
                 <div class="col-12 d-flex shopping-box">
                     <input type="hidden" name="id_user" value="<?= $get['id_user'] ?>" >
-                    <button class="ml-auto btn hvr-hover" type="submit" name="checkout" >Checkout</button>
+                    <button class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
                 </div>
                 </form> 
             </div>

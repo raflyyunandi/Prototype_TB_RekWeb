@@ -122,6 +122,15 @@ class User extends CI_Controller
         redirect('user/cart');
     }
 
+
+    public function deletecart($id)
+    {
+      $this->Admin_model->hapusDataOrder($id);
+      $this->session->set_flashdata('flash', 'Dihapus');
+      redirect('user/cart');
+    }
+
+
      public function ganti()
      {
         $data['title'] = "My ganti";
@@ -153,26 +162,26 @@ class User extends CI_Controller
         $this->load->view('templates/ecommerce_footer');
     }
 
-    public function updatecart()
-    {
-        $id_barang   = $this->input->post('id_barang');
-        $id_user   = $this->input->post('id_user');
-        $beli   = $this->input->post('beli');
-        $id   = $this->input->post('id');
+    // public function updatecart()
+    // {
+    //     $id_barang   = $this->input->post('id_barang');
+    //     $id_user   = $this->input->post('id_user');
+    //     $beli   = $this->input->post('beli');
+    //     $id   = $this->input->post('id');
 
-        $data = array(
-              'id_barang'  => $id_barang,
-              'id_user'  => $id_user,
-              'id'  => $id,
-              'beli'  => $beli,
-          );
+    //     $data = array(
+    //           'id_barang'  => $id_barang,
+    //           'id_user'  => $id_user,
+    //           'id'  => $id,
+    //           'beli'  => $beli,
+    //       );
             
-        $this->db->set($data);
-        $this->db->where('id', $id);
-        $this->db->update('order_user');
+    //     $this->db->set($data);
+    //     $this->db->where('id', $id);
+    //     $this->db->update('order_user');
 
-        redirect('user/cart');
-    }
+    //     redirect('user/cart');
+    // }
 
     public function isisaldo()
     {

@@ -38,6 +38,12 @@ class Admin_model extends CI_model{
       $this->db->delete('barang');
     }
 
+    public function hapusDataOrder($id)
+    {
+      $this->db->where('id',$id);
+      $this->db->delete('order_user');
+    }
+
     public function cariDataBarang()
 		{
 			$keyword = $this->input->post('keyword',true);
