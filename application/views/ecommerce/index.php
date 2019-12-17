@@ -36,18 +36,19 @@
     <div class="categories-shop">
         <div class="container">
             <div class="row ">
-                <?php foreach ($barang as $key ) : ?>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt="" />
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/img-pro-02.jpg" alt="" />
                         <a class="btn hvr-hover" href="<?= base_url('auth')?>">Read More</a>
                     </div>
-                      <div class="why-text">
-                        <h4><?= $key['nama_barang']?></h4>
-                        <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
+                </div>
+
+                <div class="col-lg-6 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/img-pro-01.jpg" alt="" />
+                        <a class="btn hvr-hover" href="<?= base_url('auth')?>">Read More</a>
                     </div>
                 </div>
-                <?php endforeach ?>
             </div>
         </div>
     </div>

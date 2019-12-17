@@ -20,8 +20,8 @@
                                 <div class="form-group">
                                   <select id="jenis_barang" name="jenis_barang" class="form-control">
                                     <option selected>Pilih Jenis barang</option>
-                                    <option value="1">Sayurah</option>
-                                    <option value="2">Buah</option>
+                                    <option value="Sayuran">Sayuran</option>
+                                    <option value="Buah">Buah</option>
                                 </select>
                                 <?= form_error('jenis_barang', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>

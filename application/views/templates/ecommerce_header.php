@@ -30,6 +30,9 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
+
+                    <li><a href="<?= base_url('ecommerce/buah')?>">Buahan</a></li>
+                    <li><a href="<?= base_url('ecommerce/sayuran')?>">Sayuran</a></li>
                     <li><a href="<?= base_url('auth/index')?>">Login</a></li>
                     <li><a href="<?= base_url('auth/register')?>">Sign-up</a></li>
                 </ul>
