@@ -93,7 +93,6 @@
                         <h3>Order summary</h3>
                         <div class="d-flex">
                             <h4>Total : </h4>
-                            <div class="ml-auto font-weight-bold"><?= $key['harga_barang'] * $key['beli'] ?>
                             </div>
                         </div>
                         <div class="d-flex">
