@@ -55,5 +55,8 @@ class Admin_model extends CI_model{
 			$this->db->or_like('deskripsi_barang',$keyword);
 			return $this->db->get('barang')->result_array();
 		}
-	
+
+	public function getTransaksi(){
+		return $this->db->get('transaksi')->result_array();
+	}
 }

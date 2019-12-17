@@ -147,4 +147,12 @@ class Admin extends CI_Controller {
       $this->session->set_flashdata('flash', 'Dihapus');
       redirect('admin');
     }
+
+    public function transaksi(){
+      $data['title'] = "Ubah barang";
+      $data['data'] = $this->Admin_model->getTransaksi();
+      $this->load->view('templates/admin_header', $data);
+      $this->load->view('admin/transaksi',$data);
+      $this->load->view('templates/ecommerce_footer');
+    }
 }

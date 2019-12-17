@@ -35,6 +35,9 @@
       <li class="nav-item mr-3">
           <a class="nav-item nav-link mr-3" href="<?= base_url('admin/show')?>">Show My Sell</a>
       </li>
+      <li class="nav-item mr-3">
+          <a class="nav-item nav-link mr-3" href="<?= base_url('admin/transaksi')?>">Transaksi</a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <a href="<?= base_url('auth/logout')?>" class="btn btn-outline-success mr-sm-2" type="submit">Logout</a>
