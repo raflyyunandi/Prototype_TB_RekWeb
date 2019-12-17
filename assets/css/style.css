@@ -148,7 +148,6 @@
 }
 /*------------------------------------------------------------------ HEADER -------------------------------------------------------------------*/
  .main-top{
-     background: #000000;
      padding: 10px 0px;
 }
  .custom-select-box{
@@ -2455,7 +2454,6 @@
  .carousel-indicators{
      position: relative;
      bottom: 0;
-     background: #000000;
 }
  .carousel-indicators li{
      width: 30%;

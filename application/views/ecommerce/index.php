@@ -1,37 +1,41 @@
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
-    <div class="carousel-inner" role="listbox">
-      <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active imgctrl" style="background-image: url('assets/img/banner.png'); height: 650px; background-size: 100%;background-position:90%;">
-      <div align = "center" class="cover-slides" style="padding-top: 100px;">
-        <div style="background-image: url('assets/img/inilogonya.png'); height: 300px; background-size: 30%;   background-repeat: no-repeat; background-position: center;" ></div>
-      </div>
-      </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item imgctrl" style="background-image: url('assets/img/banner-02.jpeg'); height: 650px; background-size: 100%;   background-repeat: no-repeat; background-position: top;">
-        <div align = "center" class="cover-slides" style="padding-top: 200px;">
-          <h1  >Second Slide</h1>
-          <p class="lead">This is a description for the second slide.</p>
-        </div>
-      </div>
-      <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item imgctrl" style="background-image: url('assets/img/banner-02.jpeg'); background-size: 100%;   background-repeat: no-repeat; height: 650px; background-position: bottom;">
-        <div align = "center" class="cover-slides" style="padding-top: 200px;">
-          <h1 >Third Slide</h1>
-          <p class="lead">This is a description for the third slide.</p>
-        </div>
+  <!-- Jumbotron -->
+  <div class="row mt-4">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="">
+              <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="">
+              <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="">
+              <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
+            </a>
+          </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
   </div>
 
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
    <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
