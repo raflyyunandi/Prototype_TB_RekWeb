@@ -18,29 +18,9 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/')?>css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/')?>css/style.css" rel="stylesheet">
-    <link href="<?= base_url('assets/')?>css/navbar.css" rel="stylesheet">
-    <link href="<?= base_url('assets/')?>css/index.css" rel="stylesheet">
-
+    <link href="<?= base_url('assets/')?>css/bootstrap.css" rel="stylesheet">
 </head>
 
-<nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="">FRESHSHOPE</a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="<?= base_url('')?>">Back</a></li>
-                </ul>
-            </div>
-          
-        </div>
-    </nav>
-  <div style=" 
-     background: #060606;
-     padding: 40px 0px;
-     "><br></div>
-    <!-- Start All Title Box -->
    
 <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

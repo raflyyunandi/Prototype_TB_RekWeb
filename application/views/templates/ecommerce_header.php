@@ -50,8 +50,8 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a href="<?= base_url('auth')?>" class="btn btn-outline-success mr-sm-2" type="submit">Login</a>
-      <a href="<?= base_url('auth')?>" class="btn btn-outline-success mr-sm-2" type="submit">Sign Up</a>
+      <a href="<?= base_url('auth')?>" class="btn btn-outline-success mr-sm-2" type="submit">Sign In</a>
+      <a href="<?= base_url('auth/register')?>" class="btn btn-outline-success mr-sm-2" type="submit">Sign Up</a>
     </form>
   </div>
 </nav>

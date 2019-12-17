@@ -16,14 +16,14 @@
 
                                 <form class="user" method="post" action="<?= base_url('auth/changepassword'); ?>">
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Enter new password...">
+                                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter new password...">
                                         <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat password...">
+                                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Repeat password...">
                                         <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" class="btn btn-primarybtn-block">
                                         Change Password
                                     </button>
                                 </form>
