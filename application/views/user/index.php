@@ -28,6 +28,7 @@
                         <p>Harga Barang</p>
                         <h3>Rp. <?= $key['harga_barang']?> ,-</h3>
                         <form action="<?= base_url('user/cartadd')?>" method="post">
+                          <input type="hidden" class="form-control" name="beli" value="1">
                           <input type="hidden" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
                           <input type="hidden" class="form-control" name="id_user" value="<?= $user['id_user'] ?>">
                         <hr>

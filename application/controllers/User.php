@@ -78,30 +78,40 @@ class User extends CI_Controller
 
     public function cart()
     {
-        $id = "30";
+        // $waw= $this->db->get_where('user', ['id_user'=>
+        // $this->session->userdata('id_user')])->row_array();
+        // $id = $waw; 
+      
+
+        $this->db->select('id_user');
+        $this->db->from('order_user');
+        $data['get'] = $this->db->get()->row_array(); 
+
+
+        $id_user =  $this->input->post('id_user');
         $this->db->select('*');
         $this->db->from('order_user a'); 
         $this->db->join('barang b', 'b.id_barang=a.id_barang');
         $this->db->join('user c', 'c.id_user=a.id_user');
-        $this->db->where('c.id_user',$id);
-        $data['b'] = $this->db->get()->result_array(); 
-        
+        $this->db->where('c.id_user',$id_user);
+        $data['bacot'] = $this->db->get()->result_array();
+
         $data['title'] = "My Cart";
-        // $data['user'] = $this->db->get_where('user', ['email'=>
-        // $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/cart', $data);
         $this->load->view('templates/ecommerce_footer');
 
 
     }
-
     public function cartadd()
     {
         $id_barang   = $this->input->post('id_barang');
         $id_user   = $this->input->post('id_user');
         $beli   = $this->input->post('beli');
 
+        $this->db->select('id_user');
+        $this->db->from('user');
+        $row = $this->db->where('id_user', $id_user);
         $data = array(
               'id_barang'  => $id_barang,
               'id_user'  => $id_user,
