@@ -109,28 +109,25 @@
     $this->load->view('auth/blocked');
     }
 
-
     public function forgotPassword() 
     {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $email = $this->input->post('email');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Forgot Password';
             $this->load->view('templates/auth_header', $data);
             $this->load->view('auth/forgot-password');
             $this->load->view('templates/auth_footer');
         } else {
-            $email = $this->input->post('email');
-            $user = $this->db->get_where('user', ['email' => $email, 'is_active' => 1])->row_array();
-
-            if ($user) {
-                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Please Confirm your password!</div>');
-                $this->_login();
-            } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email is not registered or activated!</div>');
-                redirect('auth/forgotpassword');
-            }
+            $default_password = '12345';
+            $password_hash = password_hash($default_password, PASSWORD_DEFAULT);
+            $this->db->set('password', $password_hash);
+            $this->db->where('email', $email);
+            $this->db->update('user');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password telah di reset ke 12345, silahkan login kembali.</div>');
+            redirect('auth');
         }
     }
 
-    }
+}
