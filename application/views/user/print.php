@@ -1,12 +1,4 @@
-   
-    <div style=" 
-     background: #060606;
-     padding: 20px 0px;
-     ">
-     <div align="center">
-     <button> <h2>Kembali</h2> </button>
-     </div>
- </div>
+
     <!-- Start All Title Box -->
 
 <br>

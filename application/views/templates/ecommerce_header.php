@@ -31,17 +31,7 @@
       <li class="nav-item active">
         <a class="nav-link mr-3 " href="<?= base_url('')?>">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Kategori
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?= base_url('ecommerce/buah')?>">Buah</a>
-          <a class="dropdown-item" href="<?= base_url('ecommerce/sayuran')?>">Sayuran</a>
-          <!-- <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a> -->
-        </div>
-      </li>
+      
       <li class="nav-item mr-3">
           <a class="nav-item nav-link mr-3" href="" data-toggle="modal" data-target="#aboutModal">About</a>
       </li>

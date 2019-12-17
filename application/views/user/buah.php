@@ -1,23 +1,41 @@
+
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>KATEGORI</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="">User</a></li>
+                        <li class="breadcrumb-item active">Buah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
  <!-- Start Blog  -->
     <div class="latest-blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Sayuran</h1>
-                        <p>Menampilkan semua produk segar yang berkategori Sayuran</p>
+                        <h1>Buah-Buahan</h1>
+                        <p>Menampilkan semua produk berkualitas yang berkategori buah</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 
-                <?php foreach ($sayuran as $key ): ?>
+                <?php foreach ($buah as $key ): ?>
                     
 
                 <div class="col-md-6 col-lg-4 col-xl-4">
                     <div class="blog-box">
                         <div class="blog-img">
-                            <img class="img-fluid" src="<?= base_url('assets/img/barang/')?><?= $key['image'] ?>" alt=""/>
+                            <img class="img-fluid" src="<?= base_url('assets/img/barang/')?><?= $key['image'] ?>" alt="" />
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">

@@ -1,38 +1,18 @@
-            <?= $this->session->flashdata('message'); ?>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
-    <div class="carousel-inner" role="listbox">
-      <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
-          <h1 >First Slide</h1>
-          <p class="lead">This is a description for the first slide.</p>
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>MY SHOP</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="">User</a></li>
+                        <li class="breadcrumb-item active">Home</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
-          <h1  >Second Slide</h1>
-          <p class="lead">This is a description for the second slide.</p>
-        </div>
-      </div>
-      <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('assets/img/banner-02.jpg'); height: 950px;">
-        <div align = "center" class="cover-slides" style="padding-top: 400px;">
-          <h1 >Third Slide</h1>
-          <p class="lead">This is a description for the third slide.</p>
-        </div>
-      </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-  </div>
-
+    <!-- End All Title Box -->
    <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
@@ -40,35 +20,23 @@
                 <?php foreach ($barang as $key ) : ?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/<?= $key['image']?>" alt="" />
+                        <img class="img-fluid" src="<?= base_url('assets/img/barang/')?><?= $key['image']?>" alt="" />
                         <a class="btn hvr-hover" href="<?= base_url('user/detail')?>/<?=$key['id_barang']?>">Detail</a>
                     </div>
                       <div class="why-text">
-                        <h4><?= $key['nama_barang']?></h4>
-                        <h5>Rp. <?= $key['harga_barang']?> ,-</h5>
-
+                        <h3><?= $key['nama_barang']?></h3>
+                        <p>Harga Barang</p>
+                        <h3>Rp. <?= $key['harga_barang']?> ,-</h3>
                         <form action="<?= base_url('user/cartadd')?>" method="post">
-                          <input type="number" size="4" value="1" name="beli" min="0" step="1" class="c-input-text qty text">
                           <input type="hidden" class="form-control" name="id_barang" value="<?= $key['id_barang'] ?>">
                           <input type="hidden" class="form-control" name="id_user" value="<?= $user['id_user'] ?>">
-                          <br>
-                        <button  type="submit" name="cart"><h5>Add to Cart</h5></button>
-                        </form>
-
                         <hr>
+                          <button type="submit" name="cart" class="btn btn-secondary btn-block">Add to Cart</button>
+                        </form>
                      </div>
                     </div>
-                    <hr>
-
                 <?php endforeach ?>
-
             </div>
         </div>
     </div>
     <!-- End Categories -->
-
-    <div class="box-add-products">
-        <div class="container">
-
-        </div>
-    </div>
