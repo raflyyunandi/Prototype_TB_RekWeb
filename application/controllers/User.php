@@ -283,8 +283,8 @@ class User extends CI_Controller
 
         if ($this->form_validation->run() == false) 
         {
-            $this->load->view('templates/admin_header', $data);
-            $this->load->view('user/changepassword', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('user/ubahpass', $data);
             $this->load->view('templates/ecommerce_footer');
             } else {
             $current_password = $this->input->post('current_password');
@@ -292,11 +292,11 @@ class User extends CI_Controller
             if (!password_verify($current_password, $data['user']['password'])) 
                 {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong current password!</div>');
-                    redirect('user/changepassword');
+                    redirect('user/ubahpass');
                 } else {
                     if ($current_password == $new_password) {
                         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">New password cannot be the same as current password!</div>');
-                        redirect('user/changepassword');
+                        redirect('user/ubahpass');
                     } else {
                         // password sudah ok
                         $password_hash = password_hash($new_password, PASSWORD_DEFAULT);
@@ -306,7 +306,7 @@ class User extends CI_Controller
                         $this->db->update('user');
 
                         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password changed!</div>');
-                        redirect('user/changepassword');
+                        redirect('user/ubahpass');
                     }
                 }
         }
