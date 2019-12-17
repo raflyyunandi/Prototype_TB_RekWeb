@@ -9,6 +9,11 @@ class Admin extends CI_Controller {
         $this->load->library('form_validation');
     }
     public function index() {
+        $role_id = $this->session->userdata('role_id');
+        if ($role_id == 2) {
+            redirect('auth/blocked');
+        }
+        
         $data['barang'] = $this->Admin_model->getAllBarang();
          if( $this->input->post('keyword')) {
         $data['barang'] = $this->Admin_model->cariDataBarang();
@@ -40,7 +45,7 @@ class Admin extends CI_Controller {
       $stock_barang   = $this->input->post('stock_barang');
       $deskripsi_barang   = $this->input->post('deskripsi_barang');
       // get foto
-      $config['upload_path'] = './assets/img/';
+      $config['upload_path'] = './assets/img/barang/';
       $config['allowed_types'] = 'jpg|png|jpeg|gif';
       $config['max_size'] = '2048';  //2MB max
       $config['max_width'] = '4480'; // pixel
@@ -72,6 +77,15 @@ class Admin extends CI_Controller {
         return $this->load->view('admin/error');
         $this->load->view('templates/ecommerce_footer');
     }
+
+    public function show(){
+        $data['barang'] = $this->Admin_model->getAllBarang();
+        $data['title'] = "Show All Item Sell";
+        $this->load->view('templates/admin_header', $data);
+        $this->load->view('admin/show');
+        $this->load->view('templates/ecommerce_footer');
+    }
+
     public function edit($id)
     {
       $data['title'] = "Ubah barang";
@@ -88,7 +102,7 @@ class Admin extends CI_Controller {
       $stock_barang   = $this->input->post('stock_barang');
       $deskripsi_barang   = $this->input->post('deskripsi_barang');
       $id_barang   = $this->input->post('id_barang');
-      $path = './assets/img/';
+      $path = './assets/img/barang/';
       $data = array(
         'nama_barang'  => $nama_barang,
         'jenis_barang'  => $jenis_barang,

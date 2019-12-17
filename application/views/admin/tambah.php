@@ -1,5 +1,18 @@
 
-<div style=" background: #060606; padding: 40px 0px;"><br></div>
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>TAMBAH BARANG</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item active">Tambah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="contact-box-main">
     <div class="container">
@@ -51,7 +64,7 @@
 
                             </div>
                             <div class="submit-button text-center">
-                                <button class="btn hvr-hover" name="tambah" type="submit" name="submit" value="Submit">Submit</button>
+                                <button class="btn btn-dark" name="tambah" type="submit" name="submit" value="Submit">Submit</button>
                             </div>
                         </div>
                     </div>

@@ -14,6 +14,7 @@ class User extends CI_Controller
         if ($role_id == 1) {
             redirect('auth/blocked');
         }
+        
         $data['barang'] = $this->Admin_model->getAllBarang();
         $data['order'] = $this->Admin_model->getAllOrder();
         $data['title'] = "Index Shop";

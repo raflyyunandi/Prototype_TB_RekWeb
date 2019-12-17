@@ -1,7 +1,6 @@
 
 <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 
-<div style=" background: #060606; padding: 40px 0px;"><br></div>
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">
@@ -30,7 +29,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="special-menu text-center">
-                            <a class="btn hvr-hover" href="<?= base_url('admin/tambah')?>"><h1 style="color: white; padding: 5px;">Tambah Barang Baru</h1></a>
+                            <a class="btn btn-dark" href="<?= base_url('admin/tambah')?>">Tambah Barang Baru</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +40,7 @@
                 <div class="input-group mb-0 ">
                   <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   <div class="input-group-append">
-                  <button class="btn hvr-hover" type="submit"><h1 style="color: white; padding: 0px;">Search</h1></button>
+                  <button class="btn btn-dark" type="submit">Search</button>
                   </div>
                 </div>
             </form>
@@ -89,7 +88,7 @@
                                     </td>
                                         
                                      <td class="price-pr">
-                                        <img width="80" src="<?= base_url('assets/')?>img/<?= $key['image']?>">
+                                        <img width="80" src="<?= base_url('assets/')?>img/barang/<?= $key['image']?>">
                                         <p><?= $key['image'] ?></p>
                                     </td>
                                     <td class="total-pr">
