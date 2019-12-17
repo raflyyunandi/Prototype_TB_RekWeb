@@ -1095,6 +1095,7 @@
 }
  .title-blog{
      padding: 40px 30px 40px 30px;
+     height: 300px; 
 }
  .title-blog h3{
      font-size: 20px;
