@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>MY Cart</h2>
+                    <h2>MY CART</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">User</a></li>
                         <li class="breadcrumb-item active">Cart</li>

@@ -1,11 +1,27 @@
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>GANTI PROFILE</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="">User</a></li>
+                        <li class="breadcrumb-item active">ganti</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
    <!-- Begin Page Content -->
+   <br>
+   <br>
+   
 <div class="container">
-
 <!-- Page Heading -->
-<h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <?= form_open_multipart('user/edit'); ?>
         <div class="form-group row">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
