@@ -43,6 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <?php $i=0; ?>
                                 <?php foreach ($bacot as $key ): ?>
 
@@ -109,8 +110,6 @@
                     <input type="hidden" name="id_user" value="<?= $key['id_user'] ?>" >
                     <input type="hidden" name="saldo" value="<?= $key['saldo'] ?>" >
                     <input type="hidden" name="total" value="<?= $i * $key['harga_barang'] ?>" >
-                    <input type="hidden" name="stock_barang" value="<?= $key['stock_barang'] ?>" >
-                    <input type="hidden" name="stock_barang" value="<?= $key['beli'] * $i  ?>" >
                     <button class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
                 </div>
                 </form> 
