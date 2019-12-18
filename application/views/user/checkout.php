@@ -31,12 +31,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="" placeholder="Lokasi Anda?" >
+                                    <input type="text" class="form-control" name="" placeholder="Lokasi Anda?" required="" >
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                  <select name="cara_pengiriman" class="form-control">
+                                  <select value="REGULER" name="cara_pengiriman" class="form-control">
                                     <option value="">Pilih Cara Pengiriman</option>
                                     <option value="REGULER">REGULER</option>
                                     <option value="INSTANT">INSTANT</option>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-md-12">
                                 <div class="form-group">
-                                  <select name="kurir" class="form-control">
+                                  <select value="JNE" name="kurir" class="form-control">
                                     <option value="">Pilih Kurir</option>
                                     <option value="JNE">JNE</option>
                                     <option value="GOJEK">GOJEK</option>
@@ -58,22 +58,22 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No HP Aktif">
+                                <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No HP Aktif" required="">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="kota_tujuan" name="kota_tujuan" placeholder="Kota Tujuan">
+                                <input type="text" class="form-control" id="kota_tujuan" name="kota_tujuan" placeholder="Kota Tujuan" required="">
                             </div>
                         </div>
           
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="alamat_lengkap" name="alamat_lengkap" placeholder="Alamat Lengkap" rows="4" data-error="Alamat Lengkap" ></textarea>
+                                <textarea class="form-control" id="alamat_lengkap" name="alamat_lengkap" placeholder="Alamat Lengkap" rows="4" data-error="Alamat Lengkap" required=""></textarea>
                             </div>
                             <div class="submit-button text-center">
                                 <input type="hidden" name="email_user" value="<?= $user['email'] ?>">
-                                <button class="btn btn-dark" name="print" type="submit" name="submit" value="Submit">Submit + Print</button>
+                                <button class="btn btn-dark" name="print" type="submit" name="submit" value="Submit" required="">Submit + Print</button>
                             </div>
                         </div>
                     </div>
