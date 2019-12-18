@@ -17,8 +17,13 @@
        <br>
        <form method="post" action="" class="text-center">
          <button class="btn btn-dark" type="submit" name="id_user" value="<?= $get['id_user'] ?> ">TAMPILKAN</button>
-       </form> 
-       
+       </form>
+       <hr>
+
+       <div class="container">
+       <?= $this->session->flashdata('message'); ?>
+       </div>
+
    <!-- Start Cart  -->
     <div class="cart-box-main">
         <div class="container">
@@ -93,10 +98,11 @@
                         <h3>Order summary</h3>
                         <div class="d-flex">
                             <h4>Total : </h4>
-                            </div>
+                            <div class="ml-auto font-weight-bold"><?= $i * $key['harga_barang'] ?></div>
                         </div>
                         <div class="d-flex">
                             <h4>Discount Coupon</h4>
+                            
                             <div class="ml-auto font-weight-bold">0</div>
                         </div>
                         <hr class="my-1">
@@ -104,7 +110,9 @@
                 </div>
                 <form method="post" action="<?= base_url('user/checkout')?>">
                 <div class="col-12 d-flex shopping-box">
-                    <input type="hidden" name="id_user" value="<?= $get['id_user'] ?>" >
+                    <input type="hidden" name="id_user" value="<?= $key['id_user'] ?>" >
+                    <input type="hidden" name="saldo" value="<?= $key['saldo'] ?>" >
+                    <input type="hidden" name="total" value="<?= $i * $key['harga_barang'] ?>" >
                     <button class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
                 </div>
                 </form> 

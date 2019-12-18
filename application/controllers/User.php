@@ -81,9 +81,8 @@ class User extends CI_Controller
         // $waw= $this->db->get_where('user', ['id_user'=>
         // $this->session->userdata('id_user')])->row_array();
         // $id = $waw; 
-      
 
-        $this->db->select('id_user');
+        $this->db->select('id_user', 'saldo');
         $this->db->from('order_user');
         $data['get'] = $this->db->get()->row_array(); 
 
@@ -202,12 +201,27 @@ class User extends CI_Controller
     }
 
     public function checkout(){
-        $data['title'] = "checkout";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
+
+        $id_user   = $this->input->post('id_user');
+        $saldo   = $this->input->post('saldo');
+        $total   = $this->input->post('total');
+
+        $this->db->select('saldo');
+        $this->db->from('user');
+        $this->db->where('id_user' ,$id_user);
+
+        $bisa = $saldo - $total;
+        if ($bisa > 0 ){
+        $data['title'] = "checkout";
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/checkout', $data);
         $this->load->view('templates/ecommerce_footer');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Saldo Tidak Cukup</div>');
+            redirect('user/cart');
+        }
     }
 
     // public function checkout() 
