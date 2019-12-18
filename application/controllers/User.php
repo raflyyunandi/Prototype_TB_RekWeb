@@ -236,11 +236,6 @@ class User extends CI_Controller
         $this->db->set($data);
         $this->db->where('id_user', $id_user);
         $this->db->update('user');
-
-        $this->db->where('id_user',$id_user);
-        $this->db->limit(1); 
-        $this->db->delete('order_user');
-
         } else {
               $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Saldo Tidak Cukup/Item belum ditampilkan</div>');
             redirect('user/cart');
