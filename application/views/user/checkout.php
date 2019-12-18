@@ -72,6 +72,7 @@
                                 <textarea class="form-control" id="alamat_lengkap" name="alamat_lengkap" placeholder="Alamat Lengkap" rows="4" data-error="Alamat Lengkap" ></textarea>
                             </div>
                             <div class="submit-button text-center">
+                                <input type="hidden" name="email_user" value="<?= $user['email'] ?>">
                                 <button class="btn btn-dark" name="print" type="submit" name="submit" value="Submit">Submit + Print</button>
                             </div>
                         </div>

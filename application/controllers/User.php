@@ -289,6 +289,7 @@ class User extends CI_Controller
         $no_hp = $this->input->post('no_hp');
         $kota_tujuan = $this->input->post('kota_tujuan');
         $alamat_lengkap = $this->input->post('alamat_lengkap');
+        $email_user = $this->input->post('email_user');
 
         $data = array(
           'cara_pengiriman'  => $cara_pengiriman,
@@ -296,6 +297,7 @@ class User extends CI_Controller
           'no_hp'  => $no_hp,
           'kota_tujuan'  => $kota_tujuan,
           'alamat_lengkap'  => $alamat_lengkap,
+          'email_user' => $email_user,
         );
 
         $this->db->insert('transaksi',$data);
