@@ -38,7 +38,7 @@
                                     <th>Nama Produk</th>
                                     <th>Harga</th>
                                     <th>Yang Dibeli</th>
-                                    <th>Stock Ada</th>
+                                    <th>Isi Dalam 1 Paket</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
@@ -73,9 +73,6 @@
                         </div>
                     </div>
                 </div>
-                    <div class="update-box" >
-                    <input type="submit" name="updatecart" value="Update Cart">
-                    </div>
             </div>
         
       <div class="row my-5">

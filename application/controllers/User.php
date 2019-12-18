@@ -221,15 +221,17 @@ class User extends CI_Controller
         $this->db->where('id_user' ,$id_user);
 
         $bisa = $saldo - $total;
+
         if ($bisa > 0 ){
         $data['title'] = "checkout";
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/checkout', $data);
         $this->load->view('templates/ecommerce_footer');
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Saldo Tidak Cukup</div>');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Saldo Tidak Ada</div>');
             redirect('user/cart');
         }
+          
     }
 
     // public function checkout() 

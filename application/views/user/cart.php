@@ -38,7 +38,7 @@
                                     <th>Nama Produk</th>
                                     <th>Harga</th>
                                     <th>Yang Dibeli</th>
-                                    <th>Stock Ada</th>
+                                    <th>Isi Dalam 1 Paket</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
@@ -59,7 +59,7 @@
                                     </td>
                                     <td class="quantity-box"><input name="beli" type="number" size="4" value="<?= $key['beli']?>" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr">
-                                       <p><?= $key['stock_barang']?></p>
+                                       <p><?= $key['stock_barang']?> item</p>
                                     </td>
                                     <td class="remove-pr">
                                         <a href="<?= base_url('user/deletecart/')?><?= $key['id'] ?>">
@@ -76,7 +76,7 @@
         </form>
 
             <div class="row my-5">
-                <div class="col-lg-10 col-sm-6">
+                <div class="col-lg-12 col-sm-6">
                     <div class="coupon-box">
                         <div class="input-group input-group-sm">
                             <input class="form-control" placeholder="Enter your coupon code" aria-label="Coupon code" type="text">
@@ -86,11 +86,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="update-box" >
-                    <input type="submit" name="updatecart" value="Update Cart">
-                    </div>
-            </div>
-        
+               </div>
       <div class="row my-5">
                 <div class="col-lg-8 col-sm-12"></div>
                 <div class="col-lg-4 col-sm-12">
@@ -113,6 +109,8 @@
                     <input type="hidden" name="id_user" value="<?= $key['id_user'] ?>" >
                     <input type="hidden" name="saldo" value="<?= $key['saldo'] ?>" >
                     <input type="hidden" name="total" value="<?= $i * $key['harga_barang'] ?>" >
+                    <input type="hidden" name="stock_barang" value="<?= $key['stock_barang'] ?>" >
+                    <input type="hidden" name="stock_barang" value="<?= $key['beli'] * $i  ?>" >
                     <button class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
                 </div>
                 </form> 

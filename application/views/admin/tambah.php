@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="number" min="0" step="1" class="c-input-text qty text form-control" id="stock_barang" name="stock_barang" placeholder="Stock barang">
+                                <input type="number" min="0" step="1" class="c-input-text qty text form-control" id="stock_barang" name="stock_barang" placeholder="Isi item /Paket">
                                 <?= form_error('stock_barang', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                         </div>
