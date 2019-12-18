@@ -12,8 +12,17 @@
             </div>
         </div>
     </div>
+        <div class="container">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <br>
+                        <h1>Lokasi Pengiriman</h1>
+                        <p>Harap isikan dengan benar! karena Barang siap diantarkan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="contact-box-main">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-sm-12">
@@ -27,43 +36,43 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                  <select id="jenis_barang" name="jenis_barang" class="form-control">
-                                    <option selected>Pilih Cara Pengiriman</option>
-                                    <option value="">REGULER</option>
-                                    <option value="">INSTANT</option>
-                                    <option value="">EXPRESS</option>
-                                    <option value="">SLOW</option>
+                                  <select name="cara_pengiriman" class="form-control">
+                                    <option value="">Pilih Cara Pengiriman</option>
+                                    <option value="REGULER">REGULER</option>
+                                    <option value="INSTANT">INSTANT</option>
+                                    <option value="EXPRESS">EXPRESS</option>
+                                    <option value="SLOW">SLOW</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-12">
                                 <div class="form-group">
-                                  <select id="jenis_barang" name="jenis_barang" class="form-control">
-                                    <option selected>Pilih Kurir</option>
-                                    <option value="">JNE</option>
-                                    <option value="">GOJEK</option>
-                                    <option value="">JET</option>
-                                    <option value="">JET</option>
+                                  <select name="kurir" class="form-control">
+                                    <option value="">Pilih Kurir</option>
+                                    <option value="JNE">JNE</option>
+                                    <option value="GOJEK">GOJEK</option>
+                                    <option value="JET">JET</option>
+                                    <option value="NJT">NJT</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="" name="" placeholder="No HP Aktif">
+                                <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No HP Aktif">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="" name="" placeholder="Kota Tujuan">
+                                <input type="text" class="form-control" id="kota_tujuan" name="kota_tujuan" placeholder="Kota Tujuan">
                             </div>
                         </div>
           
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="" name="" placeholder="Deskripsi barang" rows="4" data-error="Alamat Tujuan" ></textarea>
+                                <textarea class="form-control" id="alamat_lengkap" name="alamat_lengkap" placeholder="Alamat Lengkap" rows="4" data-error="Alamat Lengkap" ></textarea>
                             </div>
                             <div class="submit-button text-center">
-                                <button class="btn btn-dark" name="print" type="submit" name="submit" value="Submit">Submit</button>
+                                <button class="btn btn-dark" name="print" type="submit" name="submit" value="Submit">Submit + Print</button>
                             </div>
                         </div>
                     </div>

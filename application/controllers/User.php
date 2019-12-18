@@ -283,6 +283,22 @@ class User extends CI_Controller
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/print', $data);
+
+        $cara_pengiriman = $this->input->post('cara_pengiriman');
+        $kurir = $this->input->post('kurir');
+        $no_hp = $this->input->post('no_hp');
+        $kota_tujuan = $this->input->post('kota_tujuan');
+        $alamat_lengkap = $this->input->post('alamat_lengkap');
+
+        $data = array(
+          'cara_pengiriman'  => $cara_pengiriman,
+          'kurir'  => $kurir,
+          'no_hp'  => $no_hp,
+          'kota_tujuan'  => $kota_tujuan,
+          'alamat_lengkap'  => $alamat_lengkap,
+        );
+
+        $this->db->insert('transaksi',$data);
     }
 
     public function edit()
