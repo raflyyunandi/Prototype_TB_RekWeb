@@ -95,10 +95,18 @@ class User extends CI_Controller
         $this->db->where('c.id_user',$id_user);
         $data['bacot'] = $this->db->get()->result_array();
 
+        
+        if(!$id_user =  $this->input->post('id_user')){
+        $data['title'] = "My Cart";
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/cartkosong', $data);
+        $this->load->view('templates/ecommerce_footer');
+        } else {
         $data['title'] = "My Cart";
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/cart', $data);
         $this->load->view('templates/ecommerce_footer');
+        }
 
 
     }
