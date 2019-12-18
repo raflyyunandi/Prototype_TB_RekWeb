@@ -22,23 +22,16 @@
                     <div class="title-all text-center">
                         <br>
                         <h1>SELAMAT DATANG MASTER</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <p>Ini halaman untuk melihat transaksi yang pernah dilakukan user</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="special-menu text-center">
-                            <a class="btn btn-dark" href="<?= base_url('admin/tambah')?>">Tambah Barang Baru</a>
-                    </div>
-                </div>
-            </div>
-           
+
             <div class="row">
         <div class="col-md-4" >
             <form action="" method="post">
                 <div class="input-group mb-0 ">
-                  <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
+                  <input type="text" class="form-control" placeholder="Cari Data User" name="keyword">
                   <div class="input-group-append">
                   <button class="btn btn-dark" type="submit">Search</button>
                   </div>
@@ -58,8 +51,12 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Id Transaksi</th>
-                                    <th>Nama Barang yang terjual</th>
-                                    <th>Nama User yang membeli</th>
+                                    <th>Email User</th>
+                                    <th>Cara Pengiriman</th>
+                                    <th>Kurir</th>
+                                    <th>No HP Pembeli</th>
+                                    <th>Kota Tujuan</th>
+                                    <th>Alamat Lengkap</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,11 +70,24 @@
                                         <a href="#"><?= $key['id_transaksi'] ?></a>
                                     </td>
                                     <td class="name-pr">
-                                        <a href="#"><?= $key['id_barang'] ?></a>
+                                        <a href="#"><?= $key['email_user'] ?></a>
                                     </td>
-                                     <td class="name-pr">
-                                        <a href="#"><?= $key['id_user'] ?></a>
+                                    <td class="name-pr">
+                                        <a href="#"><?= $key['cara_pengiriman'] ?></a>
                                     </td>
+                                    <td class="name-pr">
+                                        <a href="#"><?= $key['kurir'] ?></a>
+                                    </td>
+                                    <td class="name-pr">
+                                        <a href="#"><?= $key['no_hp'] ?></a>
+                                    </td>
+                                    <td class="name-pr">
+                                        <a href="#"><?= $key['kota_tujuan'] ?></a>
+                                    </td>
+                                    <td class="name-pr">
+                                        <a href="#"><?= $key['alamat_lengkap'] ?></a>
+                                    </td>
+                                        
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>
