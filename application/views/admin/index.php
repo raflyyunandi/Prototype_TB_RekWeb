@@ -100,20 +100,23 @@
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
+
                             </tbody>
+
                         </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
             <?php if(empty($barang) ) : ?>
                 <div class="alert alert-danger" role="alert">
                  Data Barang Tidak ditemukan
                 </div>
             <?php endif; ?>
-        
+                    </div>
+                </div>
+            </div>
         </div>
+
+    </div>
+        </div>
+
     </div>
     
