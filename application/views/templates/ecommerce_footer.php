@@ -36,7 +36,7 @@
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: RekWeb. 04 <br>UNPAS,<br> No 193 SetiaBudi </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: RekWeb. 04 <br>UNPAS No 193 SetiaBudi </p>
                             </li>
                             <li>
                                 <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+6282245638645">+6282245638645</a></p>
