@@ -51,7 +51,7 @@
 
      <!-- Modal -->
   <div class="modal fade" id="aboutModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog col-auto">
     
       <!-- Modal content-->
       <div class="modal-content">
@@ -59,17 +59,93 @@
           <h1>Contact us</h1>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <!-- Start About Page  -->
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-12">
+                    <h2 class="noo-sh-title text-center">Description Job</h2>
+                </div>
+
+                <div class="col-sm-6 col-lg-12">
+                    <div class="hover-team">
+                        <div class="our-team"> 
+                          <img src="<?= base_url('assets/img') ?>/img-1.jpg" alt=""/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                           
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Name</p>
+                        </div>
+                      </div>
+                  </div>
+
+                <div class="col-sm-6 col-lg-6">
+                    <div class="hover-team">
+                        <div class="our-team"> 
+                          <img src="<?= base_url('assets/img') ?>/img-1.jpg" alt=""/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                           
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Name</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="hover-team">
+                        <div class="our-team"> 
+                          <img src="<?= base_url('assets/img') ?>/img-1.jpg" alt=""/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                           
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Name</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="hover-team">
+                        <div class="our-team"> 
+                          <img src="<?= base_url('assets/img') ?>/img-1.jpg" alt=""/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                           
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Name</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="hover-team">
+                        <div class="our-team"> 
+                          <img src="<?= base_url('assets/img') ?>/img-1.jpg" alt=""/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                           
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Name</p>
+                        </div>
+                      </div>
+                    </div>
         </div>
       </div>
-      
     </div>
   </div>
-  
+</div>
    <!-- Modal -->
   <div class="modal fade" id="contactModal" role="dialog">
     <div class="modal-dialog">
