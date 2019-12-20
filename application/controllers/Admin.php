@@ -12,6 +12,8 @@ class Admin extends CI_Controller {
         $role_id = $this->session->userdata('role_id');
         if ($role_id == 2) {
             redirect('auth/blocked');
+        } elseif (empty($role_id)) {
+            redirect('auth/blocked');
         }
         
         $data['barang'] = $this->Admin_model->getAllBarang();
@@ -67,9 +69,12 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('admin');
           }
+          redirect('admin/error');
         }
+        redirect('admin/error');
       }
     }
+
     public function error()
     {
         $data['title'] = "Error Page";

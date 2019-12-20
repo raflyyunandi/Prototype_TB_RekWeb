@@ -19,8 +19,8 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12">
                 <div class="contact-form-right">
-                    <h2>GET IN TOUCH</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p>
+                    <h2>TAMBAH BARANG</h2>
+                    <p>Halaman ini terdapat form untuk menambahkan barang baru, Silahkan isi dengan benar!</p>
                     <form action="<?=base_url()?>Admin/tambah" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-12">

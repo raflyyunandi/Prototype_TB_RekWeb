@@ -13,6 +13,8 @@ class User extends CI_Controller
         $role_id = $this->session->userdata('role_id');
         if ($role_id == 1) {
             redirect('auth/blocked');
+        } elseif (empty($role_id)) {
+            redirect('auth/blocked');
         }
         
         $data['barang'] = $this->Admin_model->getAllBarang();

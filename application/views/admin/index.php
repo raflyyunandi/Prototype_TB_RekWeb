@@ -22,7 +22,7 @@
                     <div class="title-all text-center">
                         <br>
                         <h1>SELAMAT DATANG MASTER</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <p>Halaman ini terdapat fitur CRUD Untuk Kelola Barang</p>
                     </div>
                 </div>
             </div>
