@@ -29,31 +29,31 @@ class User extends CI_Controller
     }
 
      public function buah(){
-            $data['title'] = 'R.A.F Shop';
-            // $aku = $this->db->query('SELECT * FROM `barang` WHERE jenis_barang = 2')->result_array();
-            $this->db->select('*');
-            $this->db->from('barang');
-            $a = 2;
-            $row = $this->db->where('jenis_barang' , $a);
-            $data['buah'] = $this->db->get()->result_array();
+        $data['title'] = 'R.A.F Shop';
+        // $aku = $this->db->query('SELECT * FROM `barang` WHERE jenis_barang = 2')->result_array();
+        $this->db->select('*');
+        $this->db->from('barang');
+        $a = 2;
+        $row = $this->db->where('jenis_barang' , $a);
+        $data['buah'] = $this->db->get()->result_array();
 
-            $this->load->view('templates/topbar', $data);
-            $this->load->view('user/buah');
-            $this->load->view('templates/ecommerce_footer');
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/buah');
+        $this->load->view('templates/ecommerce_footer');
     }
 
     public function sayuran(){
-            $data['title'] = 'R.A.F Shop';
-            
-            $this->db->select('*');
-            $this->db->from('barang');
-            $a = 1;
-            $row = $this->db->where('jenis_barang' , $a);
-            $data['sayuran'] = $this->db->get()->result_array();
+        $data['title'] = 'R.A.F Shop';
+        
+        $this->db->select('*');
+        $this->db->from('barang');
+        $a = 1;
+        $row = $this->db->where('jenis_barang' , $a);
+        $data['sayuran'] = $this->db->get()->result_array();
 
-            $this->load->view('templates/topbar', $data);
-            $this->load->view('user/sayuran');
-            $this->load->view('templates/ecommerce_footer');
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/sayuran');
+        $this->load->view('templates/ecommerce_footer');
     }
 
     public function detail($id)
@@ -156,7 +156,7 @@ class User extends CI_Controller
         $data['data'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/topbar', $data);
-        return $this->load->view('user/topup', $data);
+        $this->load->view('user/topup', $data);
         $this->load->view('templates/ecommerce_footer');
 
     }
@@ -226,7 +226,7 @@ class User extends CI_Controller
 
         if ($bisa > 0 ){
         $data['title'] = "checkout";
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('templates/checkout_header', $data);
         $this->load->view('user/checkout', $data);
         $this->load->view('templates/ecommerce_footer');
         
@@ -283,7 +283,7 @@ class User extends CI_Controller
         $data['title'] = "PRINT";
         $data['user'] = $this->db->get_where('user', ['email'=>
         $this->session->userdata('email')])->row_array();
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('templates/checkout_header', $data);
         $this->load->view('user/print', $data);
 
         $cara_pengiriman = $this->input->post('cara_pengiriman');

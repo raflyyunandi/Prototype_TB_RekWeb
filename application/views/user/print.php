@@ -30,4 +30,9 @@
                 </div>
             </div>
         </div>
+
+      <div class="text-center">
+            <p class="text-gray-500 mb-0">Ingin Belanja lagi?</p>
+            <a href="<?= base_url('user'); ?>">&larr; kembali ke halaman utama</a>
+        </div>
     <!-- End Cart -->
