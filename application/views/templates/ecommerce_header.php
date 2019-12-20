@@ -33,10 +33,10 @@
       </li>
       
       <li class="nav-item mr-3">
-          <a class="nav-item nav-link mr-3" href="" data-toggle="modal" data-target="#aboutModal">About</a>
+          <a class="nav-item nav-link mr-3" href="" data-toggle="modal" data-target="#aboutModal">About us</a>
       </li>
       <li>
-          <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#contactModal">Contact us</a>
+          <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#contactModal">Our logo</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -56,7 +56,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h1>Contact us</h1>
+          <h1>About us</h1>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
          <!-- Start About Page  -->
@@ -148,16 +148,24 @@
 </div>
    <!-- Modal -->
   <div class="modal fade" id="contactModal" role="dialog">
-    <div class="modal-dialog">
-    
+    <div class="modal-dialog col-auto">
+      
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h1>Contact us</h1>
+          <h1>Our logo</h1>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+            
+          <div class="col-sm-6 col-lg-12">
+            <div class="hover-team">
+                <div class="our-team"> 
+                  <img src="<?= base_url('assets/img') ?>/inilogo.png" alt=""/>
+                </div>
+              </div>
+          </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
