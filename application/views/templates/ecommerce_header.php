@@ -31,6 +31,11 @@
       <li class="nav-item active">
         <a class="nav-link mr-3 " href="<?= base_url('')?>">Home <span class="sr-only">(current)</span></a>
       </li>
+
+      <li class="nav-item active">
+        <a class="nav-link mr-3 " href="<?= base_url('ecommerce/shop')?>">Product <span class="sr-only">(current)</span></a>
+      </li>
+      
       
       <li class="nav-item mr-3">
           <a class="nav-item nav-link mr-3" href="" data-toggle="modal" data-target="#aboutModal">About us</a>
