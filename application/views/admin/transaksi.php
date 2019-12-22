@@ -6,10 +6,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>MY JUGMENT</h2>
+                    <h2>MY TRANSACTION</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item active">Action</li>
+                        <li class="breadcrumb-item active">Transaksi</li>
                     </ul>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                     <div class="title-all text-center">
                         <br>
-                        <h1>SELAMAT DATANG MASTER</h1>
+                        <h1>RIWAYAT TRANSAKSI</h1>
                         <p>Ini halaman untuk melihat transaksi yang pernah dilakukan user</p>
                     </div>
                 </div>

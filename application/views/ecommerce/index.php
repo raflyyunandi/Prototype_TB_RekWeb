@@ -1,5 +1,4 @@
   <!-- Jumbotron -->
-  <div class="row mt-4">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -24,7 +23,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">

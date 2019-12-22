@@ -106,7 +106,9 @@
 
     public function blocked() 
     {
+    $this->load->view('templates/auth_header');
     $this->load->view('auth/blocked');
+    $this->load->view('templates/auth_footer');
     }
 
     public function forgotPassword() 
