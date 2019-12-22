@@ -106,13 +106,16 @@
                 </div>
                 </div>
                 <form method="post" action="<?= base_url('user/checkout')?>">
-                <div class="col-12 d-flex shopping-box">
+                <div class="col-12 d-flex shopping-box" >
                     <input type="hidden" name="id_user" value="<?= $key['id_user'] ?>" >
                     <input type="hidden" name="saldo" value="<?= $key['saldo'] ?>" >
                     <input type="hidden" name="total" value="<?= $i * $key['harga_barang'] ?>" >
-                    <button class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
+                    <button  class="ml-auto btn btn-dark" type="submit" name="checkout" >Checkout</button>
+
                 </div>
                 </form> 
+                 <a href="<?= base_url(); ?>user" class="btn btn-dark" >Back</a>   
+                
             </div>
 
         </div>

@@ -55,8 +55,9 @@
             </div>
 
             <div class="form-group row justify-content-end">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                <div class="col-sm-10" class="submit-button text-left">
+                    <button type="submit" class="btn btn-primary" >Edit</button>
+                    <a href="<?= base_url(); ?>user/profile" class="btn btn-danger" class="submit-button text-left">Back</a>
                     </div>
                 </div>
             </form>

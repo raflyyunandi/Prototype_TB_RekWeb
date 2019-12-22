@@ -61,7 +61,8 @@
                         <div class="price-box-bar">
                             <div class="cart-and-bay-btn">
                                 <a class="btn btn-info" data-fancybox-close="" href="#"><i class="fas fa-heart"></i> Add to Cart</a>
-                                <a class="btn btn-danger" href="<?= base_url('user') ?>">Kembali</a>
+                                 <a href="<?= base_url(); ?>user" class="btn btn-danger">Kembali</a>
+                               <!--  <a class="btn btn-danger" href="<?= base_url('user') ?>">Kembali</a> -->
                             </div>
                         </div>
 

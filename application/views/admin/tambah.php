@@ -63,9 +63,12 @@
                                 <?= form_error('deskripsi_barang', '<small class="text-danger pl-3">', '</small>'); ?>
 
                             </div>
-                            <div class="submit-button text-center">
-                                <button class="btn btn-dark" name="tambah" type="submit" name="submit" value="Submit">Submit</button>
+                            <div class="submit-button text-center">   
+                                <button class="btn btn-dark" name="tambah" type="submit" name="submit" value="Submit" >Submit</button>
                             </div>
+                           
+                                <a href="<?= base_url(); ?>admin" class="btn btn-dark" class="submit-button text-left">Back</a>
+                                
                         </div>
                     </div>
                 </form>
