@@ -838,10 +838,19 @@
     padding-top: 70px;
 }
 
-.left carousel-control ,
-.right carousel-control {
+/* .carousel-control {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 105px;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+
+.left-carousel-control ,
+.right-carousel-control {
     width: 45px;
-    height: 45px;
+    height: 45x;
     border: none;
     border-radius: 100%;
     opacity: 1;
@@ -850,15 +859,19 @@
     background-position: center;
     background-color: #292727;
 }
-  .left carousel-control {
+.left-carousel-control:hover ,
+.right-carousel-control:hover {
+    background-color: #fc5d35;
+}
+  .left-carousel-control {
         
-        background-image: url(../img/prev.png);
+        background-image: url(assets/img/prev.png);
   }
   
-  .right carousel-control {
+  .right-carousel-control {
        
-        background-image: url(../img/next.png);
-  }
+        background-image: url(assets/img/next.png);
+  } */
 
 
 /*------------------------------------------------------------------ Categories Shop -------------------------------------------------------------------*/
