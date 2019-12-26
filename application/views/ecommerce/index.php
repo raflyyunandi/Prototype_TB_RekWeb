@@ -8,17 +8,17 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           
-            <img src="<?= base_url('assets/img/banner1.png'); ?>" class="d-block w-100">
+            <img src="<?= base_url('assets/img/welcome.png'); ?>" class="d-block w-100">
           
         </div>
         <div class="carousel-item">
           
-            <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
+            <img src="<?= base_url('assets/img/banner1.png'); ?>" class="d-block w-100">
          
         </div>
         <div class="carousel-item">
           
-            <img src="<?= base_url('assets/img/banner-03.jpg'); ?>" class="d-block w-100">
+            <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
           
         </div>
       </div>
@@ -56,7 +56,7 @@
   <div class="container lg-6">
     <form class="form-inline">
 
-      <a href="<?= base_url('auth')?>" class="custom_dark-btn mr-sm-2">Red More</a>
+      <a href="<?= base_url('auth')?>" class="custom_dark-btn mr-sm-2">Read More</a>
 
     </form>
   </div>

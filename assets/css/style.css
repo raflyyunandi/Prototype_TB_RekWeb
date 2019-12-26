@@ -19,10 +19,11 @@
     SKELETON
 -------------------------------------------------------------------*/
  body {
-     color: #666666;
+     color: lightcyan;
      font-size: 15px;
      font-family: 'Dosis', sans-serif;
      line-height: 1.80857;
+    
 }
  a {
      color: #1f1f1f;
@@ -147,6 +148,17 @@
   background-color: transparent;
 }
 
+.pp-profile{
+    border: green solid 1px;
+    width: 250px;
+    height: 250px;
+}
+.pp-profile img {
+    width: 200px;
+    height: 220px;
+    padding: center;
+    margin: center;
+}
 /*------------------------------------------------------------------ LOADER -------------------------------------------------------------------*/
  #back-to-top {
      position: fixed;
@@ -822,9 +834,15 @@
      text-transform: uppercase;
      padding: 10px 20px;
 }
+.carousel-item{
+    padding-top: 70px;
+}
 /*------------------------------------------------------------------ Categories Shop -------------------------------------------------------------------*/
  .categories-shop{
      padding: 70px 0px;
+}
+.categoriess-shop{
+    padding: 70px 0px;
 }
  .shop-cat-box{
      margin-bottom: 30px;
@@ -836,6 +854,7 @@
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease-in-out 0s;
 }
+
  .shop-cat-box img{
      margin: -10px 0 0 -10px;
      max-width: none;
@@ -867,6 +886,20 @@
      font-size: 18px;
      font-weight: 700;
      padding: 12px 0px;
+}
+.categoriess-shop .shop-cat-box a{
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    color: green;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 0px;
 }
 
 .box-add-products{
