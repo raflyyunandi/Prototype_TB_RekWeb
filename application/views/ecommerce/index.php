@@ -41,17 +41,24 @@
       <div class="col-lg-6 col-xs-12">
         <div class="shop-cat-box">
           <img class="img-fluid" src="<?= base_url('assets/')?>img/img-pro-02.jpg" alt="" />
-          <a class="btn hvr-hover" href="<?= base_url('auth')?>">Read More</a>
+          <!-- <a class="btn hvr-hover" href="">Read More</a> -->
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="shop-cat-box">
           <img class="img-fluid" src="<?= base_url('assets/')?>img/img-pro-01.jpg" alt="" />
-          <a class="btn hvr-hover" href="<?= base_url('auth')?>">Read More</a>
+          <!-- <a class="btn hvr-hover" href="">Read More</a> -->
         </div>
       </div>
     </div>
+  </div>
+  <div class="container lg-6">
+    <form class="form-inline">
+
+      <a href="<?= base_url('auth')?>" class="custom_dark-btn mr-sm-2">Red More</a>
+
+    </form>
   </div>
 </div>
 <!-- End Categories -->
