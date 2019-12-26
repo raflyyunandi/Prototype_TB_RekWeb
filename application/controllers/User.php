@@ -13,7 +13,7 @@ class User extends CI_Controller
         $role_id = $this->session->userdata('role_id');
         if ($role_id == 1) {
             redirect('auth/blocked');
-        } elseif (empty($role_id)) {
+        }elseif (empty($role_id)) {
             redirect('auth/blocked');
         }
         
@@ -28,7 +28,8 @@ class User extends CI_Controller
         $this->load->view('templates/ecommerce_footer');
     }
 
-     public function buah(){
+     public function buah()
+     {
         $data['title'] = 'R.A.F Shop';
         // $aku = $this->db->query('SELECT * FROM `barang` WHERE jenis_barang = 2')->result_array();
         $this->db->select('*');
@@ -36,6 +37,7 @@ class User extends CI_Controller
         $a = 2;
         $row = $this->db->where('jenis_barang' , $a);
         $data['buah'] = $this->db->get()->result_array();
+       
 
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/buah');

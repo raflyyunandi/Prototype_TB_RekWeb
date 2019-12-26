@@ -69,6 +69,7 @@
                                 <div class="submit-button text-center">
                                     <button class="btn btn-dark" name="edit" type="submit" name="submit" value="Submit">Submit</button>
                                 </div>
+                                 <a href="<?= base_url(); ?>admin" class="btn btn-dark" class="submit-button text-left">Back</a>
                             </div>
                         </div>
                     </form>

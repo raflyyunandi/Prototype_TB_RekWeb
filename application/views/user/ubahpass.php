@@ -38,9 +38,15 @@
                 <?= form_error('new_password2', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Change Password</button>
+                <div class="submit-button text-center">
+                <button type="submit" class="btn btn-primary" >Change Password</button>
+            </div>  
+              <a href="<?= base_url(); ?>user/profile" class="btn btn-dark" class="submit-button text-right">Back</a>
             </div>
+          
+
             </form>
+       
             </div>
         </div>
     </div>
