@@ -41,14 +41,14 @@
             <div class="row ">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/profile/avatar.png" alt="" />
                         <a class="btn hvr-hover" href="<?= base_url('user/ganti')?>">Ganti Profile</a>
                     </div>
                     
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/profile/saldo.png" alt="" />
                         <a class="btn hvr-hover" href="<?= base_url('user/topup')?>">Isi Saldo</a>
                     </div>
                     
@@ -56,7 +56,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= base_url('assets/')?>img/categories_img_01.jpg" alt="" />
+                        <img class="img-fluid" src="<?= base_url('assets/')?>img/profile/ubahpass.png" alt="" />
                         <a class="btn hvr-hover" href="<?= base_url('user/ubahpass')?>">Ubah Password</a>
                     </div>
                     
