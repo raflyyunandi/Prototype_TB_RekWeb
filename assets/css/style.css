@@ -1271,7 +1271,7 @@
 	font-size: 20px;
 }
 .footer-top-box h3::before {
-    border-bottom: 2px solid #b0b435;
+    border-bottom: 2px solid green;
     content: "";
     height: 3px;
     width: 50%;
@@ -1337,8 +1337,8 @@
      line-height: 32px;
 }
  .footer-top-box ul li a:hover {
-     color: #b0b435;
-     border-color: #b0b435;
+     color: green;
+     border-color: green;
 }
 .footer-widget, .footer-link, .footer-link-contact{
 	margin-top: 15px;
@@ -1353,7 +1353,7 @@
      font-weight: 700;
 }
  .footer-widget h4::before {
-     border-bottom: 3px solid #b0b435;
+     border-bottom: 3px solid green;
      content: "";
      height: 3px;
      width: 100%;
@@ -1380,7 +1380,7 @@
      font-weight: 700;
 }
  .footer-link h4::before {
-     border-bottom: 3px solid #b0b435;
+     border-bottom: 3px solid green;
      content: "";
      height: 3px;
      width: 100%;
@@ -1421,8 +1421,8 @@
      left: 5px;
 }
  .footer-link ul li a:hover {
-     color: #b0b435;
-     border-color: #b0b435;
+     color: green;
+     border-color: green;
      padding-left: 20px;
 }
  .footer-link-contact h4{
@@ -1435,7 +1435,7 @@
      font-weight: 700;
 }
  .footer-link-contact h4::before {
-     border-bottom: 3px solid #b0b435;
+     border-bottom: 3px solid green;
      content: "";
      height: 3px;
      width: 100%;
@@ -1468,7 +1468,7 @@
      color: #cccccc;
 }
  .footer-link-contact ul li p a:hover{
-     color: #b0b435;
+     color: green;
 }
 /*------------------------------------------------------------------ Copyright -------------------------------------------------------------------*/
  .footer-copyright{
@@ -1485,7 +1485,7 @@
      color: #ffffff;
 }
  .footer-copyright p a:hover{
-     color: #b0b435;
+     color: green;
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
  .all-title-box{
