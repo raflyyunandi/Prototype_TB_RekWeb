@@ -308,6 +308,15 @@
  nav.navbar.bootsnav ul.nav > li > a{
      margin: 0px;
 }
+/* navbar logo-team */
+
+.logo-team img{
+    width: 150px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+
 /* Navbar Adjusment =========================== */
 /* Navbar Atribute ------*/
  .attr-nav > ul > li > a{

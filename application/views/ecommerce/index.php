@@ -7,19 +7,19 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <a href="">
-            <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
-          </a>
+          
+            <img src="<?= base_url('assets/img/banner1.png'); ?>" class="d-block w-100">
+          
         </div>
         <div class="carousel-item">
-          <a href="">
+          
             <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
-          </a>
+         
         </div>
         <div class="carousel-item">
-          <a href="">
-            <img src="<?= base_url('assets/img/banner-01.jpg'); ?>" class="d-block w-100">
-          </a>
+          
+            <img src="<?= base_url('assets/img/banner-03.jpg'); ?>" class="d-block w-100">
+          
         </div>
       </div>
     </div>

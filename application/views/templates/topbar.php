@@ -21,7 +21,18 @@
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-  <a class="navbar-brand" href="">LOGO</a>
+  
+<!-- Logo -->
+  <a class="navbar-brand" href="<?= base_url('user')?>">
+          <div class="logo-team m-auto">
+              <div class="our-logo"> 
+                <img src="<?= base_url('assets/img') ?>/logofs.png" alt=""/>
+              </div>
+          </div>
+    
+  </a>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
