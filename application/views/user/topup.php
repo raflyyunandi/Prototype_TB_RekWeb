@@ -59,7 +59,9 @@
                             </div>
                                 <div class="submit-button text-center">
                                     <button class="btn btn-dark" name="isisaldo" type="submit" name="submit" value="Submit">Submit</button>
+
                                 </div>
+                             <a href="<?= base_url(); ?>user/profile" class="btn btn-dark" >Back</a> 
                             </div>
                         </div>
                     </form>
