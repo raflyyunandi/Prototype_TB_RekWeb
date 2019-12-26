@@ -837,6 +837,30 @@
 .carousel-item{
     padding-top: 70px;
 }
+
+.left carousel-control ,
+.right carousel-control {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    background-color: #292727;
+}
+  .left carousel-control {
+        
+        background-image: url(../img/prev.png);
+  }
+  
+  .right carousel-control {
+       
+        background-image: url(../img/next.png);
+  }
+
+
 /*------------------------------------------------------------------ Categories Shop -------------------------------------------------------------------*/
  .categories-shop{
      padding: 70px 0px;
